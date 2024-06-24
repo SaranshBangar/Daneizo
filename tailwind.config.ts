@@ -94,6 +94,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         praise: ['Praise', 'cursive'],
+        outfit: ['Outfit', 'sans-serif'],
+        palanquin: ['Palanquin', 'sans-serif'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

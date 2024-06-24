@@ -4,17 +4,21 @@ import SearchNavbar from "./Navbar Components/SearchNavbar"
 
 const Navbar = () => {
   return (
-    <nav className="bg-gradient-to-b from-[#28354F] to-[#040312] w-full h-[80px] flex justify-between px-[102px]">
-        <section>
-            <LogoTitleNavbar />
-        </section>
-        <section>
-            <SearchNavbar />
-        </section>
-        <section>
+    <section className="bg-gradient-to-b from-[#28354F] to-[#040312] flex justify-center items-center">
+      <nav className="w-[80%] h-[80px] flex justify-around items-center gap-10">
+        <div className="flex gap-20 items-center p-4">
+            <div>
+              <LogoTitleNavbar />
+            </div>
+            <div>
+              <SearchNavbar />
+            </div>
+        </div>
+        <div>
             <LinksNavbar />
-        </section>
-    </nav>
+        </div>
+      </nav>
+    </section>
   )
 }
 

@@ -4,7 +4,8 @@ const LogoTitleNavbar = () => {
   return (
     <div className="flex gap-2 items-center">
         <a href="/" className="cursor-default">
-          <img src={logo} alt="logo" />
+          {/* Replace the bottom div with the logo */}
+          <div className="bg-pink-200 opacity-30 w-[35px] h-[35px]"></div>
         </a>
         <a href="/" className="cursor-default">
           <h2 className="font-praise text-white text-[30px]">Daneízo</h2>

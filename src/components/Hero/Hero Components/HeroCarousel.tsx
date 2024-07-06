@@ -45,28 +45,28 @@ const HeroCarousel: React.FC = () => {
           <div className="transition-all duration-700 ease-in-out" data-carousel-item>
             <img
               src="https://picsum.photos/600/300"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
             />
           </div>
           <div className="hidden transition-all duration-700 ease-in-out" data-carousel-item>
             <img
               src="https://picsum.photos/600/299"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
             />
           </div>
           <div className="hidden transition-all duration-700 ease-in-out" data-carousel-item>
             <img
               src="https://picsum.photos/599/300"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
             />
           </div>
           <div className="hidden transition-all duration-700 ease-in-out" data-carousel-item>
             <img
               src="https://picsum.photos/599/299"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
             />
           </div>

@@ -24,10 +24,8 @@ const HeroText = () => {
                     borderColour="#FFFFFF"
                 />
             </div>
-            {/* <div>
-                <img src={HeroCat} alt="Cat" />
-            </div> */}
-            <div className="absolute w-[381px] h-[148px] bg-pink-200 opacity-30 border-2 z-50 -top-5 left-0 right-0"></div>
+            {/* Replace the bottom div with the HeroCat image */}
+            <div className="absolute w-[381px] h-[148px] bg-pink-200 opacity-30 border-2 z-10 -top-5 left-0 right-0"></div>
         </div>
     </div>
   )

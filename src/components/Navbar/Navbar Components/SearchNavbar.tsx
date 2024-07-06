@@ -9,12 +9,16 @@ const searchItem = () => {
 const SearchNavbar = () => {
   return (
     <div className="flex gap-2 items-center">
-      <img
-        src={searchIcon}
-        alt="Search"
-        className="cursor-pointer"
-        onClick={searchItem}
-      />
+      {/*
+        Replace the bottom div with the HeroCat image 
+        <img
+          src={searchIcon}
+          alt="Search"
+          className="cursor-pointer"
+          onClick={searchItem}
+        />
+      */}
+      <div className="bg-pink-200 opacity-30 w-[23px] h-[23px]"></div>
       <input
         type="text"
         placeholder="Search For Home Appliances..."

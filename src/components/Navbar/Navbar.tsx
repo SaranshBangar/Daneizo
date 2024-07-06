@@ -1,6 +1,6 @@
-import LinksNavbar from "./Navbar Components/LinksNavbar"
-import LogoTitleNavbar from "./Navbar Components/LogoTitleNavbar"
-import SearchNavbar from "./Navbar Components/SearchNavbar"
+import LinksNavbar from "./Navbar Components/NavbarLinks"
+import LogoTitleNavbar from "./Navbar Components/NavbarLogoTitle"
+import SearchNavbar from "./Navbar Components/NavbarSearch"
 
 const Navbar = () => {
   return (

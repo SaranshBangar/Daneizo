@@ -25,7 +25,7 @@ const HeroText = () => {
                 />
             </div>
             {/* Replace the bottom div with the HeroCat image */}
-            <div className="absolute w-[381px] h-[148px] bg-pink-200 opacity-30 border-2 z-10 -top-5 left-0 right-0"></div>
+            <div className="absolute bg-pink-200 opacity-30 w-[381px] h-[148px] border-2 z-10 -top-5 left-0 right-0"></div>
         </div>
     </div>
   )

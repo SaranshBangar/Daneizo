@@ -1,36 +1,32 @@
 "use client";
 
-const searchIcon = require("./../../../../public/Search.svg");
+import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 
-const searchItem = () => {
-  console.log("Search Initiated");
-}
+const NavbarSearch = () => {
+  const placeholders = [
+    "Toys for children",
+    "DSLR Camera",
+    "SUV for rent",
+    "Dell XPS 15 2021",
+    "iPhone 13 Pro Max",
+  ];
 
-const SearchNavbar = () => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submitted");
+  };
   return (
-    <div className="flex gap-2 items-center">
-      {/*
-        Replace the bottom div with the HeroCat image 
-        <img
-          src={searchIcon}
-          alt="Search"
-          className="cursor-pointer"
-          onClick={searchItem}
-        />
-      */}
-      <div className="bg-pink-200 opacity-30 w-[23px] h-[23px]"></div>
-      <input
-        type="text"
-        placeholder="Search For Home Appliances..."
-        className="bg-transparent outline-none border-b-2 w-[220px] border-white text-white placeholder-[rgba(255, 255, 255, 0.66)] placeholder:text-[14px]"
-        onKeyPress={(event) => {
-          if (event.key === "Enter") {
-            searchItem();
-          }
-        }}
+    <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
+      <PlaceholdersAndVanishInput
+        placeholders={placeholders}
+        onChange={handleChange}
+        onSubmit={onSubmit}
       />
     </div>
   );
 }
 
-export default SearchNavbar;
+export default NavbarSearch

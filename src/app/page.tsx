@@ -10,7 +10,7 @@ export default function Home() {
         <div className="w-[75%]">
           <Hero />
           <TopRentedItems />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <br />
         </div>
       </div>
     </main>

@@ -45,24 +45,24 @@ const AllTopRentedItems = [
         rating : 4.7
     },
     {
-        image : "https://picsum.photos/243/236",
-        itemName : "Laptop",
-        lender : "Dev",
-        place : "Canada",
-        oldPrice : 10000,
-        currentPrice : 9500,
-        duration : "day",
-        rating : 4.7
+        image : "https://picsum.photos/243/237",
+        itemName : "Toyota Car",
+        lender : "Saransh",
+        place : "Gurgaon",
+        oldPrice : 5000,
+        currentPrice : 3500,
+        duration : "week",
+        rating : 4.8
     },
     {
-        image : "https://picsum.photos/243/236",
-        itemName : "Laptop",
-        lender : "Dev",
-        place : "Canada",
-        oldPrice : 10000,
-        currentPrice : 9500,
-        duration : "day",
-        rating : 4.7
+        image : "https://picsum.photos/242/237",
+        itemName : "Hairdryer",
+        lender : "Rakiul",
+        place : "Malda",
+        oldPrice : 1000,
+        currentPrice : 800,
+        duration : "week",
+        rating : 4.9
     },
 ]
 
@@ -133,7 +133,7 @@ const TopRentedItemsCards = () => {
         {/* <div className="z-100 bg-gradient-to-r from-[#040312] to-transparent absolute top-0 bottom-0 left-0 w-[75px] pointer-events-none"></div>
         <div className="z-100 bg-gradient-to-l from-[#040312] to-transparent absolute top-0 bottom-0 right-0 w-[75px] pointer-events-none"></div> */}
         <div
-            className="flex flex-row gap-[14px] justify-evenly items-center overflow-auto"
+            className="flex flex-row gap-[14px] justify-evenly items-center overflow-auto no-scrollbar"
             ref={scrollRef}
         >
             {AllTopRentedItems.map((item, index) => (

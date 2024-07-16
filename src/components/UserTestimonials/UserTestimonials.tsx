@@ -1,3 +1,4 @@
+import UserTestimonialsCards from "./User Testimonials Components/UserTestimonialsCards"
 import UserTestimonialsStickyScroll from "./User Testimonials Components/UserTestimonialsStickyScroll"
 import UserTestimonialsTitle from "./User Testimonials Components/UserTestimonialsTitle"
 
@@ -6,7 +7,8 @@ const UserTestimonials = () => {
     <section className="mt-[120px]">
         <div className="flex flex-col gap-[14px]">
             <UserTestimonialsTitle />
-            <UserTestimonialsStickyScroll />
+            {/* <UserTestimonialsStickyScroll /> */}
+            <UserTestimonialsCards />
         </div>
     </section>
   )

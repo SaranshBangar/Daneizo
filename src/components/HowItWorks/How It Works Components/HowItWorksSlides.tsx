@@ -10,7 +10,7 @@ const HowItWorksSlides = () => {
       title: "Register",
       value: "register",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
           <p>Register with us!</p>
           <Slide />
         </div>
@@ -20,7 +20,7 @@ const HowItWorksSlides = () => {
       title: "Upload",
       value: "upload",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
           <p>Upload a photo of your product</p>
           <Slide />
         </div>
@@ -30,7 +30,7 @@ const HowItWorksSlides = () => {
       title: "Details",
       value: "details",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
           <p>Fill in the details for your product</p>
           <Slide />
         </div>
@@ -40,7 +40,7 @@ const HowItWorksSlides = () => {
       title: "Post",
       value: "post",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
           <p>Post your product here</p>
           <Slide />
         </div>
@@ -50,7 +50,7 @@ const HowItWorksSlides = () => {
       title: "Voila",
       value: "voila",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
           <p>Voila! You have just listed your product here!</p>
           <Slide />
         </div>

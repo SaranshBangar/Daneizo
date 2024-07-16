@@ -1,7 +1,5 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react";
-
 type TopRentedItemsCardsProps = {
     image : string;
     itemName : string;
@@ -103,30 +101,7 @@ const Card : React.FC<TopRentedItemsCardsProps> = ({
     </div>
 )
 
-const TopRentedItemsCards = () => {
-
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-    const scrollRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const scroll = () => {
-            if (scrollRef.current) {
-                const { scrollWidth, clientWidth, scrollLeft } = scrollRef.current;
-
-                if (scrollLeft + clientWidth >= scrollWidth) {
-                    scrollRef.current.scrollLeft = 0;
-                } else {
-                    scrollRef.current.scrollLeft = scrollLeft + 1;
-                }
-            }
-        };
-
-        const intervalId = setInterval(scroll, 30);
-
-        return () => clearInterval(intervalId);
-    }, []);
-
+const UserTestimonialsCards = () => {
   return (
     <div className="relative">
         {/* Gradient effect on cards left and right */}
@@ -134,17 +109,9 @@ const TopRentedItemsCards = () => {
         <div className="z-100 bg-gradient-to-l from-[#040312] to-transparent absolute top-0 bottom-0 right-0 w-[75px] pointer-events-none"></div> */}
         <div
             className="flex flex-row gap-[14px] justify-evenly items-center overflow-auto no-scrollbar"
-            ref={scrollRef}
         >
             {AllTopRentedItems.map((item, index) => (
                 <div
-                    key={index}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    style={{
-                        opacity: hoveredIndex !== null && hoveredIndex !== index ? 0.6 : 1,
-                        transition: 'opacity 0.2s ease-in-out'
-                    }}
                 >
                     <Card
                         image={item.image}
@@ -163,4 +130,4 @@ const TopRentedItemsCards = () => {
   )
 }
 
-export default TopRentedItemsCards
+export default UserTestimonialsCards

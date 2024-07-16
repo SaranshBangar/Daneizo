@@ -1,12 +1,31 @@
 "use client"
 
 import React, { useState } from 'react';
+import nProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
+const showProgressbar = (): void => {
+  nProgress.start();
+  nProgress.set(0.2);
+  nProgress.set(0.4);
+  nProgress.set(0.6);
+  nProgress.set(0.8);
+  nProgress.done();
+};
 
 const LinksNavbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleNavigation = (href: string) => {
+    showProgressbar();
+    setTimeout(() => {
+      window.location.href = href;
+      nProgress.done();
+    }, 300);
   };
 
   return (
@@ -36,23 +55,23 @@ const LinksNavbar: React.FC = () => {
           tabIndex={-1}
         >
           <div className="py-1" role="none">
-            <a href="/top-rented" target='_blank' className="text-gray-700 block p-1 text-sm " role="menuitem" tabIndex={-1} id="menu-item-0">
+            <a href="#top-rented" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-0" onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }}>
               <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-slate-200'>
                 Top Rented Items
               </p>
             </a>
-            <a href="/featured" target='_blank' className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-1">
+            <a href="#featured" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-1" onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }}>
               <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-slate-200'>
                 Featured Items
               </p>
             </a>
-            <a href="/about" target='_blank' className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-2">
+            <a href="#about" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-2" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }}>
               <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-slate-200'>
                 About Us
               </p>
             </a>
             <div className="border-t border-gray-100"></div>
-            <a href="/login" target='_blank' className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-3">
+            <a href="#login" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-3" onClick={(e) => { e.preventDefault(); handleNavigation('/login'); }}>
               <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-green-400'>
                 Login/Register
               </p>
@@ -62,6 +81,6 @@ const LinksNavbar: React.FC = () => {
       )}
     </div>
   );
-}
+};
 
 export default LinksNavbar;

@@ -6,7 +6,6 @@ const UserTestimonials = () => {
     <section className="mt-[120px] mb-[56px]">
         <div className="flex flex-col gap-[14px]">
             <UserTestimonialsTitle />
-            {/* <UserTestimonialsStickyScroll /> */}
             <UserTestimonialsCards />
         </div>
     </section>

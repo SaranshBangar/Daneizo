@@ -1,12 +1,12 @@
 "use client"
 
-type TopRentedItemsCardsProps = {
+type AllUserTestimonialsProps = {
     image : string;
     userName : string;
     testimonial : string;
 }
 
-const AllTopRentedItems = [
+const AllUserTestimonials = [
     {
         image : "https://picsum.photos/120",
         userName : "Daniel",
@@ -24,7 +24,7 @@ const AllTopRentedItems = [
     },
 ]
 
-const Card : React.FC<TopRentedItemsCardsProps> = ({
+const Card : React.FC<AllUserTestimonialsProps> = ({
     image,
     userName,
     testimonial,
@@ -37,7 +37,7 @@ const Card : React.FC<TopRentedItemsCardsProps> = ({
                 className=" size-[120px] rounded-full z-[2]"
             />
         </div>
-        <div className="bg-gradient-to-br from-[#433FD7] to-[#8D8BD3] w-[365px] h-[272px] rounded-[20px] absolute bottom-0">
+        <div className="bg-gradient-to-br from-[#433FD7]/20 to-[#8D8BD3]/20 w-[365px] h-[272px] rounded-[20px] absolute bottom-0">
             <div className="mt-[20px] h-full flex flex-col justify-evenly items-center">
                 <p className="font-outfit font-semibold text-[25px] text-white text-center px-4]">{userName}</p>
                 <p className="font-tillana text-[22px] text-white text-center px-4">{testimonial}</p>
@@ -55,7 +55,7 @@ const UserTestimonialsCards = () => {
         <div
             className="flex flex-row gap-[14px] justify-evenly items-center overflow-auto no-scrollbar"
         >
-            {AllTopRentedItems.map((item, index) => (
+            {AllUserTestimonials.map((item, index) => (
                 <div
                 >
                     <Card

@@ -1,14 +1,13 @@
 import React from 'react'
 import HeroButton from './HeroButton'
-import HeroCat from "./../../../../public/HeroCat.svg"
 
 const HeroText = () => {
   return (
     <div>
         <h1 className='font-outfit font-bold text-[50px] text-white mb-[2px]'>Daneízo</h1>
         <h3 className='font-palanquin font-normal text-[30px] text-white w-[240px]'>Rent, Use, Return - It's That Simple !</h3>
-        <div className='relative'>
-            <div className='flex justify-between items-center mt-[38px]'>
+        <div>
+            <div className='absolute flex gap-[27px] items-center'>
                 <HeroButton
                     key='key1'
                     text="Sign Up"
@@ -24,8 +23,9 @@ const HeroText = () => {
                     borderColour="#FFFFFF"
                 />
             </div>
-            {/* Replace the bottom div with the HeroCat image */}
-            <div className="absolute bg-pink-200 opacity-30 w-[381px] h-[148px] border-2 z-10 -top-5 left-0 right-0"></div>
+            <div>
+                <img src="./HeroCat.svg" alt="" className="w-[381px] h-[148px] mt-[48px]" />
+            </div>
         </div>
     </div>
   )

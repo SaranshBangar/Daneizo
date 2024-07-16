@@ -25,6 +25,7 @@ const config: Config = {
         praise: ['Praise', 'cursive'],
         outfit: ['Outfit', 'sans-serif'],
         palanquin: ['Palanquin', 'sans-serif'],
+        tillana: ['Tillana', 'cursive'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

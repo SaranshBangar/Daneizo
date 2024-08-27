@@ -168,7 +168,7 @@ const Card: React.FC<TopRentedItemsCardsProps> = ({
         <Link
             href={`/items/${id}?${queryParams}`}
             target="_blank"
-            className="min-w-[285px] h-[360px] rounded-[20px] bg-[#8D8BD3]/20 flex flex-col gap-[7px]"
+            className="min-w-[285px] h-[340px] rounded-[20px] bg-[#8D8BD3]/20 flex flex-col gap-[7px]"
             style={{ cursor: "pointer" }}
         >
             <div className="mt-[20px] mx-[20px]">
@@ -179,22 +179,9 @@ const Card: React.FC<TopRentedItemsCardsProps> = ({
             </div>
             <div className="text-white mx-[20px]">
                 <div className="font-outfit font-semibold text-[22px]">{itemName}</div>
-                <div className="flex flex-row gap-[20px] text-center">
-                    <div className="font-outfit font-semibold text-[18px] text-[#FFFFFF]/80">{lender}</div>
-                    <div className="flex flex-row gap-[1px] items-center">
-                        <div>
-                            <MapPin className="size-[20px]" />
-                        </div>
-                        <div className="font-outfit font-medium text-[16px] text-[#FFFFFF]/80">{place}</div>
-                    </div>
-                </div>
                 <div className="flex flex-row justify-between items-center">
                     <div>
                         <span className="font-outfit font-medium text-red-300 text-[14px] line-through">₹{oldPrice}</span> - <span className="font-outfit font-semibold text-green-500 text-[20px]">₹{currentPrice}</span> <span className="font-outfit font-medium text-[14px]">/ {duration}</span>
-                    </div>
-                    <div className="font-outfit font-semibold text-[15px] rounded-[5px] bg-[#C8C7F4]/20 text-center px-1 w-fit h-fit flex flex-row items-center gap-1">
-                        {rating}
-                        <Star className="size-[15px]" />
                     </div>
                 </div>
             </div>

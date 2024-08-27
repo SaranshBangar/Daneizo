@@ -4,6 +4,10 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Star } from "lucide-react";
 
+interface SimilarItemsProps {
+  lender : string;
+}
+
 type TopRentedItemsCardsProps = {
     image: string;
     itemName: string;
@@ -198,7 +202,7 @@ const Card: React.FC<TopRentedItemsCardsProps> = ({
     );
 };
 
-const TopRentedItemsCards = () => {
+const SimilarItems: React.FC<SimilarItemsProps> = ({ lender }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -223,7 +227,8 @@ const TopRentedItemsCards = () => {
     const allItemsList = [...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems]; 
 
     return (
-        <div className="relative">
+        <div className="relative my-[30px] flex flex-col gap-3">
+            <h2 className="font-outfit text-2xl text-white font-bold">Other items by {lender}</h2>
             <div
                 className="flex flex-row gap-[14px] justify-evenly items-center overflow-auto no-scrollbar"
                 ref={scrollRef}
@@ -261,4 +266,4 @@ const TopRentedItemsCards = () => {
     );
 };
 
-export default TopRentedItemsCards;
+export default SimilarItems;

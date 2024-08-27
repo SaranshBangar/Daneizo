@@ -33,7 +33,7 @@ const LinksNavbar: React.FC = () => {
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full rounded-lg border border-gray-300 shadow-md px-4 py-2 bg-white text-sm font-medium text-gray-700 transition-all duration-100 ease-in-out hover:bg-gray-100 focus:outline-none"
+          className="inline-flex justify-center w-full rounded-lg border border-gray-300 shadow-md px-4 py-2 bg-white text-sm font-medium text-gray-700 transition-all duration-150 ease-in-out hover:bg-gray-100 focus:outline-none"
           id="menu-button"
           aria-expanded={isOpen}
           aria-haspopup="true"
@@ -56,23 +56,23 @@ const LinksNavbar: React.FC = () => {
         >
           <div className="py-1" role="none">
             <a href="#top-rented" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-0" onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-slate-200'>
+              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200'>
                 Top Rented Items
               </p>
             </a>
             <a href="#featured" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-1" onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-slate-200'>
+              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200'>
                 Featured Items
               </p>
             </a>
             <a href="#about" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-2" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-slate-200'>
+              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200'>
                 About Us
               </p>
             </a>
             <div className="border-t border-gray-100"></div>
             <a href="#login" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-3" onClick={(e) => { e.preventDefault(); handleNavigation('/login'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-100 ease-in-out hover:bg-green-400'>
+              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:text-white hover:bg-gradient-to-br from-[#0F2654] to-[#3A284F]'>
                 Login/Register
               </p>
             </a>

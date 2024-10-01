@@ -45,7 +45,7 @@ export const Tabs = ({
         )}
       >
         {propTabs.map((tab, idx) => (
-            <div className="flex flex-wrap w-full justify-evenly items-center">
+            <div key={idx} className="flex flex-wrap w-full justify-evenly items-center">
                 <button
                     key={tab.title}
                     onClick={() => {

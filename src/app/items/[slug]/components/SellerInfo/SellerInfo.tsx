@@ -1,4 +1,5 @@
 import { CircleCheckBig, Dot, MapPin, Star } from "lucide-react";
+import Image from "next/image";
 
 interface SellerInfoProps {
     lender : string;
@@ -41,7 +42,13 @@ const SellerInfo: React.FC<SellerInfoProps> = ({ lender, place, rating }) => {
                         </div>
                     </div>
                     <div>
-                        <img src="https://picsum.photos/110" alt="" className="rounded-full shadow-xl" />
+                        <Image
+                            src="https://picsum.photos/110"
+                            alt={lender}
+                            width={110}
+                            height={110}
+                            className="rounded-full shadow-xl"
+                        />
                     </div>
                 </div>
                 <a href="/" className="cursor-pointer underline underline-offset-4 text-[#D9D9D9] font-outfit font-medium text-[20px]">Similar sellers...</a>

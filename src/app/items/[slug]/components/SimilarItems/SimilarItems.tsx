@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Star } from "lucide-react";
+import Image from "next/image";
 
 interface SimilarItemsProps {
   lender : string;
@@ -172,8 +173,11 @@ const Card: React.FC<TopRentedItemsCardsProps> = ({
             style={{ cursor: "pointer" }}
         >
             <div className="mt-[20px] mx-[20px]">
-                <img
-                    src={image} 
+                <Image
+                    src={image}
+                    alt={itemName}
+                    width={285}
+                    height={237}
                     className="rounded-[15px]"
                 />
             </div>

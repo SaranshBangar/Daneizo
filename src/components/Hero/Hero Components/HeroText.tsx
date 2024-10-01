@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroButton from './HeroButton'
+import Image from 'next/image'
 
 const HeroText = () => {
   return (
@@ -24,7 +25,13 @@ const HeroText = () => {
                 />
             </div>
             <div>
-                <img src="./HeroCat.svg" alt="" className="w-[381px] h-[148px] mt-[48px]" />
+                <Image
+                    src="/HeroCat.svg"
+                    alt="HeroCat"
+                    width={381}
+                    height={148}
+                    className="mt-[48px]"
+                />
             </div>
         </div>
     </div>

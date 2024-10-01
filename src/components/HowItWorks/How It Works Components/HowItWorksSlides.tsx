@@ -1,6 +1,7 @@
 "use client";
 
 import { Tabs } from "@/components/ui/tabs";
+import Image from "next/image";
 
 const HowItWorksSlides = () => {
   const tabs = [
@@ -65,11 +66,11 @@ const HowItWorksSlides = () => {
 
 const Slide = () => {
   return (
-    <img
+    <Image
       src="https://picsum.photos/200/200"
       alt="dummy image"
-      width="100"
-      height="100"
+      width={100}
+      height={100}
       className="object-cover h-[60%] absolute top-28 inset-x-0 w-[90%] rounded-xl mx-auto"
     />
   );

@@ -16,19 +16,21 @@ export function PlaceholdersAndVanishInput({
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const startAnimation = () => {
+
+  const startAnimation = useCallback(() => {
     intervalRef.current = setInterval(() => {
       setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length);
     }, 3000);
-  };
-  const handleVisibilityChange = () => {
+  }, [placeholders.length]);
+
+  const handleVisibilityChange = useCallback(() => {
     if (document.visibilityState !== "visible" && intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     } else if (document.visibilityState === "visible") {
       startAnimation();
     }
-  };
+  }, [startAnimation]);
 
   useEffect(() => {
     startAnimation();
@@ -40,7 +42,7 @@ export function PlaceholdersAndVanishInput({
       }
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [placeholders]);
+  }, [startAnimation, handleVisibilityChange]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<any[]>([]);
@@ -174,6 +176,7 @@ export function PlaceholdersAndVanishInput({
     vanishAndSubmit();
     onSubmit && onSubmit(e);
   };
+
   return (
     <form
       className={cn(
@@ -248,23 +251,19 @@ export function PlaceholdersAndVanishInput({
           {!value && (
             <motion.p
               initial={{
-                y: 5,
+                y: 50,
                 opacity: 0,
               }}
-              key={`current-placeholder-${currentPlaceholder}`}
               animate={{
                 y: 0,
                 opacity: 1,
               }}
               exit={{
-                y: -15,
+                y: -50,
                 opacity: 0,
               }}
-              transition={{
-                duration: 0.3,
-                ease: "linear",
-              }}
-              className="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 w-[calc(100%-2rem)] truncate"
+              key={placeholders[currentPlaceholder]}
+              className="px-4 py-1.5 text-gray-400 dark:text-white/40"
             >
               {placeholders[currentPlaceholder]}
             </motion.p>

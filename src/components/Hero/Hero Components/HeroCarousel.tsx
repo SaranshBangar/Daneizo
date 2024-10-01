@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image';
 import React, { useEffect } from 'react';
 
 const HeroCarousel: React.FC = () => {
@@ -43,31 +44,39 @@ const HeroCarousel: React.FC = () => {
       <div id="default-carousel" className="relative w-full" data-carousel="slide">
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
           <div className="transition-all duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src="https://picsum.photos/600/300"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
+              width={600}
+              height={300}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
             />
           </div>
           <div className="hidden transition-all duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src="https://picsum.photos/600/299"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
+              width={600}
+              height={299}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
             />
           </div>
           <div className="hidden transition-all duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src="https://picsum.photos/599/300"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
+              width={599}
+              height={300}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
             />
           </div>
           <div className="hidden transition-all duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src="https://picsum.photos/599/299"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
               alt="..."
+              width={600}
+              height={300}
+              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
             />
           </div>
         </div>

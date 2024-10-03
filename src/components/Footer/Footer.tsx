@@ -1,83 +1,153 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Facebook, Instagram, Twitter } from "lucide-react";
-const socialLinks = [
-  { href: "https://www.instagram.com", icon: Instagram, label: "Instagram", hoverColor: "#C13584" },
-  { href: "https://www.twitter.com", icon: Twitter, label: "Twitter", hoverColor: "#1DA1F2" },
-  { href: "https://www.facebook.com", icon: Facebook, label: "Facebook", hoverColor: "#2D68C4" },
-];
-const quickLinks = [
-  { href: "/blogs", text: "Blogs" },
-  { href: "/get-app", text: "Get Desktop/Mobile Apps" },
-  { href: "/legal", text: "Legal & Privacy Information" },
-];
-const supportLinks = [
-  { href: "/help", text: "Help Center" },
-  { href: "/contact", text: "Contact Us" },
-  { href: "/faq", text: "FAQ" },
-  { href: "/terms", text: "Terms of Service" },
-];
+import React from "react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import Image from "next/image";
+
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-base pb-8 pt-12">
+    <footer className="bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center mb-10">
-          <div className="h-px w-full max-w-6xl bg-white/20 rounded-full" />
-        </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div className="space-y-4">
-              <Link href="/" className="flex gap-2 items-center mb-4">
-                <Image
-                  src="/Logo.svg"
-                  alt="Daneízo Logo"
-                  width={35}
-                  height={35}
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div className="flex gap-2 items-center">
+              <a href="/" className="cursor-default">
+                <Image src="/Logo.svg" alt="Logo" width={35} height={35} />
+              </a>
+              <a href="/" className="cursor-default">
                 <h2 className="font-praise text-white text-[30px]">Daneízo</h2>
-              </Link>
-              <p className="text-white/80 text-sm mb-6">Rent, Use, Return - It's That Simple!</p>
-              <div className="pt-4">
-                <h3 className="text-white text-lg font-medium mb-4">Follow Us</h3>
-                <div className="flex space-x-6">
-                  {socialLinks.map((link) => (
-                    <SocialLink key={link.label} {...link} />
-                  ))}
-                </div>
-              </div>
+              </a>
             </div>
-            <LinkColumn title="Quick Links" links={quickLinks} />
-            <LinkColumn title="Support" links={supportLinks} />
-          </div>
-          <div className="text-center border-t border-white/20 pt-8">
-            <p className="text-white/80 text-sm">
-              Daneízo - Copyright © {new Date().getFullYear()}. All Rights Reserved.
+            <p className="text-white/70 mb-4">
+              Empowering your digital journey with innovative solutions.
             </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-6 h-6 text-white hover:text-[#C13584] transition-colors duration-300" />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter className="w-6 h-6 text-white hover:text-[#1DA1F2] transition-colors duration-300" />
+              </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="w-6 h-6 text-white hover:text-[#2D68C4] transition-colors duration-300" />
+              </a>
+            </div>
           </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="/blogs"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/get-app"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  Get Desktop/Mobile Apps
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/legal"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  Legal & Privacy Information
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/help"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  Help Center
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <Mail className="w-5 h-5 mr-2" />
+                <a
+                  href="mailto:info@daneizo.com"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  info@daneizo.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Phone className="w-5 h-5 mr-2" />
+                <a
+                  href="tel:+11234567890"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  +1 (123) 456-7890
+                </a>
+              </li>
+              <li className="flex items-center">
+                <MapPin className="w-5 h-5 mr-2" />
+                <span className="text-white/70">
+                  123 Tech Street, Digital City, 12345
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
+            <p className="text-white/70 mb-4">
+              Stay updated with our latest news and offers.
+            </p>
+            <form className="flex flex-col space-y-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-white/10 text-white placeholder-white/50 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+          <p className="text-white/70">
+            &copy; 2024 Daneízo. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
 };
-const LinkColumn = ({ title, links }) => (
-  <div className="space-y-4">
-    <h3 className="text-white text-xl font-semibold mb-6">{title}</h3>
-    {links.map((link) => (
-      <NavLink key={link.href} {...link} />
-    ))}
-  </div>
-);
-const NavLink = ({ href, text }) => (
-  <Link href={href} className="block">
-    <p className="w-fit text-white/60 transition-all duration-300 ease-in-out hover:text-white hover:translate-x-1">
-      {text}
-    </p>
-  </Link>
-);
-const SocialLink = ({ href, icon: Icon, label, hoverColor }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" className="group" aria-label={label}>
-    <Icon className={`w-6 h-6 text-white/60 transition-all duration-300 ease-in-out group-hover:text-white group-hover:-translate-y-1 group-hover:scale-110`} style={{ '--hover-color': hoverColor }} />
-  </a>
-);
+
 export default Footer;

@@ -32,11 +32,12 @@ export const refreshTokenOptions: ITokenOptions = {
   httpOnly: true,
   sameSite: "lax",
 };
+
 export const sendToken = (user: IUser, statusCode: number, res: Response) => {
   const accessToken = user.signAccessToken();
   const refreshToken = user.signRefreshToken();
   // upload the login session to redis
-  redis.set(user._id, JSON.stringify(user as any));
+  redis.set(user._id as string, JSON.stringify(user as any));
 
   // parsing env  vars
 

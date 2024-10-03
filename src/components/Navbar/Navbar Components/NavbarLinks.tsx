@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import nProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -20,14 +21,6 @@ const LinksNavbar: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleNavigation = (href: string) => {
-    showProgressbar();
-    setTimeout(() => {
-      window.location.href = href;
-      nProgress.done();
-    }, 300);
-  };
-
   return (
     <div className="relative inline-block text-left z-50">
       <div>
@@ -40,8 +33,18 @@ const LinksNavbar: React.FC = () => {
           onClick={toggleMenu}
         >
           Login/Register
-          <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fillRule="evenodd" d="M10 3a1 1 0 01.894.553l3 6a1 1 0 01-.01.914l-3 6A1 1 0 0110 17H5a1 1 0 01-.894-1.447l3-6a1 1 0 01.01-.914l-3-6A1 1 0 015 3h5z" clipRule="evenodd" />
+          <svg
+            className="-mr-1 ml-2 h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 3a1 1 0 01.894.553l3 6a1 1 0 01-.01.914l-3 6A1 1 0 0110 17H5a1 1 0 01-.894-1.447l3-6a1 1 0 01.01-.914l-3-6A1 1 0 015 3h5z"
+              clipRule="evenodd"
+            />
           </svg>
         </button>
       </div>
@@ -55,27 +58,27 @@ const LinksNavbar: React.FC = () => {
           tabIndex={-1}
         >
           <div className="py-1" role="none">
-            <a href="#top-rented" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-0" onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200'>
+            <Link href="/top-rented" onClick={showProgressbar} className="text-gray-700 block p-1 text-sm">
+              <p className="rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200">
                 Top Rented Items
               </p>
-            </a>
-            <a href="#featured" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-1" onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200'>
+            </Link>
+            <Link href="/featured" onClick={showProgressbar} className="text-gray-700 block p-1 text-sm">
+              <p className="rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200">
                 Featured Items
               </p>
-            </a>
-            <a href="#about" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-2" onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200'>
+            </Link>
+            <Link href="/about" onClick={showProgressbar} className="text-gray-700 block p-1 text-sm">
+              <p className="rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:bg-slate-200">
                 About Us
               </p>
-            </a>
+            </Link>
             <div className="border-t border-gray-100"></div>
-            <a href="#login" className="text-gray-700 block p-1 text-sm" role="menuitem" tabIndex={-1} id="menu-item-3" onClick={(e) => { e.preventDefault(); handleNavigation('/login'); }}>
-              <p className='rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:text-white hover:bg-gradient-to-br from-[#0F2654] to-[#3A284F]'>
+            <Link href="/login" onClick={showProgressbar} className="text-gray-700 block p-1 text-sm">
+              <p className="rounded-xl px-4 py-2 transition-all duration-150 ease-in-out hover:text-white hover:bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
                 Login/Register
               </p>
-            </a>
+            </Link>
           </div>
         </div>
       )}

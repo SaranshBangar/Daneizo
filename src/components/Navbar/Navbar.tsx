@@ -1,6 +1,6 @@
-import LinksNavbar from "./Navbar Components/NavbarLinks";
-import LogoTitleNavbar from "./Navbar Components/NavbarLogoTitle";
-import SearchNavbar from "./Navbar Components/NavbarSearch";
+import LinksNavbar from "./Navbar Components/NavbarLinks"
+import LogoTitleNavbar from "./Navbar Components/NavbarLogoTitle"
+import SearchNavbar from "./Navbar Components/NavbarSearch"
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
       </nav>
     </section>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

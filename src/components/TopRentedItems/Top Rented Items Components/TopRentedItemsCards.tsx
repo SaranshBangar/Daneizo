@@ -34,6 +34,7 @@ const generateItemMappings = (items: Omit<TopRentedItemsCardsProps, 'id'>[]) => 
     return itemMappings;
 };
 
+
 const AllTopRentedItems = [
     {
         image: "https://picsum.photos/243/237",
@@ -165,7 +166,7 @@ const Card: React.FC<TopRentedItemsCardsProps> = ({
         <Link
             href={`/items/${id}?${queryParams}`}
             target="_blank"
-            className="min-w-[285px] h-[360px] rounded-[20px] bg-[#8D8BD3]/20 flex flex-col gap-[7px]"
+            className="min-w-[285px] h-[360px] rounded-[20px] bg-[#8D8BD3]/20 flex flex-col gap-[7px] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500" // Hover zoom effect with transition and gradient
             style={{ cursor: "pointer" }}
         >
             <div className="mt-[20px] mx-[20px]">
@@ -241,8 +242,9 @@ const TopRentedItemsCards = () => {
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                             style={{
-                                opacity : hoveredIndex !== null && hoveredIndex !== index ? 0.6  : 1,
-                                transition : 'opacity 0.2s ease-in-out'
+                                opacity: hoveredIndex !== null && hoveredIndex !== index ? 0.6 : 1,
+                                transition: 'opacity 0.2s ease-in-out',
+                                margin: '10px', // Add margin to provide extra space for the pop effect
                             }}
                         >
                             <Card

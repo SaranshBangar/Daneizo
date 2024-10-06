@@ -15,6 +15,9 @@ Examples of behavior that contributes to a positive environment for our communit
 - Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
 - Focusing on what is best not just for us as individuals, but for the overall community
 
+- # Our Responsibilities
+Project maintainers are responsible for upholding these standards and will take appropriate action in response to unacceptable behavior. This may include editing, removing, or rejecting comments, code, issues, or any contributions that do not align with the Code of Conduct, as well as banning individuals from the project in severe cases.
+
 ## Enforcement Responsibilities
 Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
 

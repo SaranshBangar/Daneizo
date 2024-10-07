@@ -4,9 +4,11 @@ import UserTestimonialsTitle from "./User Testimonials Components/UserTestimonia
 const UserTestimonials = () => {
   return (
     <section className="mt-[120px] mb-[56px]">
-        <div className="flex flex-col gap-[14px]">
+        <div className="flex flex-col gap-[24px]">
             <UserTestimonialsTitle />
-            <UserTestimonialsCards />
+            <div className="flex items-center justify-center">
+              <UserTestimonialsCards />
+            </div>
         </div>
     </section>
   )

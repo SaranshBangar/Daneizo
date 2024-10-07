@@ -14,12 +14,14 @@ const NavbarSearch = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
   };
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("submitted");
   };
+
   return (
-    <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
+    <div className="flex flex-col justify-center items-center px-4 py-8 md:h-[40rem] md:py-0 h-auto">
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
@@ -27,6 +29,6 @@ const NavbarSearch = () => {
       />
     </div>
   );
-}
+};
 
-export default NavbarSearch
+export default NavbarSearch;

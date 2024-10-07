@@ -1,10 +1,10 @@
-import LinksNavbar from "./Navbar Components/NavbarLinks"
-import LogoTitleNavbar from "./Navbar Components/NavbarLogoTitle"
-import SearchNavbar from "./Navbar Components/NavbarSearch"
+import LinksNavbar from "./Navbar Components/NavbarLinks";
+import LogoTitleNavbar from "./Navbar Components/NavbarLogoTitle";
+import SearchNavbar from "./Navbar Components/NavbarSearch";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-[#28354F] to-[#040312] flex justify-center items-center">
+    <header className="bg-gradient-to-b from-[#28354F] to-[#040312] flex justify-center items-center">
       <nav className="w-[80%] h-[80px] flex justify-between items-center">
         <div className="flex items-center space-x-10">
           <LogoTitleNavbar />
@@ -14,8 +14,8 @@ const Navbar = () => {
           <LinksNavbar />
         </div>
       </nav>
-    </section>
-  )
-}
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;

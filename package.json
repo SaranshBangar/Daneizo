@@ -2,7 +2,6 @@
   "name": "daneizo",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,6 +22,7 @@
     "react": "^18",
     "react-bootstrap": "^2.10.3",
     "react-dom": "^18",
+    "react-icons": "^5.3.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },

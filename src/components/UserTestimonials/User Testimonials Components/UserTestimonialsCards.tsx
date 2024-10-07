@@ -3,26 +3,24 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-// Define the testimonial data structure
+
 type AllUserTestimonialsProps = {
   image: string;
   userName: string;
   testimonial: string;
 };
 
-// Testimonial data
+
 const AllUserTestimonials = [
   {
     image: "https://picsum.photos/120",
     userName: "Daniel",
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    testimonial: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
   },
   {
     image: "https://picsum.photos/120/119",
     userName: "KEN",
-    testimonial:
-      "To be honest, when I found out the patriarchy wasn't just about horses, I lost interest.",
+    testimonial: "To be honest, when I found out the patriarchy wasn't just about horses, I lost interest.",
   },
   {
     image: "https://picsum.photos/119/120",
@@ -49,13 +47,15 @@ const AllUserTestimonials = [
   },
 ];
 
-// Testimonial Card component
+
 const Card: React.FC<AllUserTestimonialsProps> = ({
   image,
   userName,
   testimonial,
 }) => (
-  <div className="w-[365px] h-[350px] flex-shrink-0 relative">
+
+  <div className="flex flex-col items-center w-full max-w-[400px] h-[400px] relative p-4">
+
     <div className="flex justify-center">
       <Image
         src={image}
@@ -78,7 +78,6 @@ const Card: React.FC<AllUserTestimonialsProps> = ({
   </div>
 );
 
-// Carousel Component
 const UserTestimonialsCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -114,28 +113,19 @@ const UserTestimonialsCards = () => {
   }, [currentIndex, totalTestimonials]);
 
   return (
-    <div className="relative overflow-hidden w-[1150px]">
-      {/* Gradient overlay for visual effect on the sides */}
-      <div className="z-10 bg-gradient-to-r from-[#040312] to-transparent absolute top-0 bottom-0 left-0 w-[75px] pointer-events-none"></div>
-      <div className="z-10 bg-gradient-to-l from-[#040312] to-transparent absolute top-0 bottom-0 right-0 w-[75px] pointer-events-none"></div>
-
-      {/* Carousel container */}
-      <div
-        ref={carouselRef}
-        className="flex flex-row gap-[14px] transition-transform duration-500 ease-in-out"
-        style={{ width: `${clonedTestimonials.length * (365 + 14)}px` }}
-      >
-        {clonedTestimonials.map((testimonial, index) => (
+    <div className="flex flex-col md:flex-row md:justify-center md:gap-4">
+      {AllUserTestimonials.map((item, index) => (
+        <div key={index} className="flex-shrink-0 w-full md:w-1/3">
           <Card
-            key={index}
-            image={testimonial.image}
-            userName={testimonial.userName}
-            testimonial={testimonial.testimonial}
+            image={item.image}
+            userName={item.userName}
+            testimonial={item.testimonial}
           />
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
 
 export default UserTestimonialsCards;
+

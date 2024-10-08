@@ -5,11 +5,11 @@ import React, { useEffect, useState, useRef } from 'react';
 
 const HeroCarousel: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const sliderRef = useRef(null);
+    const sliderRef = useRef<HTMLDivElement | null>(null); // Use ref for the slider
 
     useEffect(() => {
-        const items = document.querySelectorAll<HTMLElement>('[data-carousel-item]');
-        const totalItems = items.length;
+        const items = sliderRef.current?.querySelectorAll('[data-carousel-item]');
+        const totalItems = items ? items.length : 0;
 
         const showSlide = (index: number) => {
             const slider = sliderRef.current;
@@ -26,13 +26,7 @@ const HeroCarousel: React.FC = () => {
             setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
         };
 
-        const nextButton = document.querySelector('[data-carousel-next]') as HTMLElement;
-        const prevButton = document.querySelector('[data-carousel-prev]') as HTMLElement;
-
-        nextButton.addEventListener('click', nextSlide);
-        prevButton.addEventListener('click', prevSlide);
-
-        // Show the current slide
+        // Show the current slide whenever currentIndex changes
         showSlide(currentIndex);
 
         // Set interval for automatic slide transition
@@ -40,8 +34,6 @@ const HeroCarousel: React.FC = () => {
 
         return () => {
             clearInterval(interval);
-            nextButton.removeEventListener('click', nextSlide);
-            prevButton.removeEventListener('click', prevSlide);
         };
     }, [currentIndex]);
 
@@ -90,7 +82,12 @@ const HeroCarousel: React.FC = () => {
                 </div>
 
                 {/* Previous Button */}
-                <button type="button" className="absolute top-1/2 left-2 z-30 p-2 bg-transparent text-white rounded-full shadow-lg transition-all duration-150 ease-in-out hover:bg-gray-700" data-carousel-prev>
+                <button
+                    type="button"
+                    className="absolute top-1/2 left-2 z-30 p-2 bg-transparent text-white rounded-full shadow-lg transition-all duration-150 ease-in-out hover:bg-gray-700"
+                    onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + sliderRef.current?.children.length!) % sliderRef.current?.children.length!)}
+                    data-carousel-prev
+                >
                     <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1L1 5l4 4" />
                     </svg>
@@ -98,7 +95,12 @@ const HeroCarousel: React.FC = () => {
                 </button>
 
                 {/* Next Button */}
-                <button type="button" className="absolute top-1/2 right-2 z-30 p-2 bg-transparent text-white rounded-full shadow-lg transition-all duration-150 ease-in-out hover:bg-gray-700" data-carousel-next>
+                <button
+                    type="button"
+                    className="absolute top-1/2 right-2 z-30 p-2 bg-transparent text-white rounded-full shadow-lg transition-all duration-150 ease-in-out hover:bg-gray-700"
+                    onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderRef.current?.children.length!)}
+                    data-carousel-next
+                >
                     <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 9l4-4-4-4" />
                     </svg>

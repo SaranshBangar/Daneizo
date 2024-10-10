@@ -3,8 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import nProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import { FaBars } from 'react-icons/fa';
-import { XIcon } from '@heroicons/react/solid';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import FaTimes for cross icon
 
 const showProgressbar = (): void => {
   nProgress.start();
@@ -18,7 +17,7 @@ const showProgressbar = (): void => {
 const LinksNavbar: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement | null>(null); // Create a ref for the dropdown
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -50,12 +49,13 @@ const LinksNavbar: React.FC = () => {
   };
 
   const toggleDropdown = () => {
+    // Reset the visibility of the cross icon each time the dropdown is opened
+    setIsVisible(true);
     setIsDropdownOpen((prev) => !prev);
   };
 
-  // Corrected handleClose function to close the dropdown and hide the XIcon
   const handleClose = () => {
-    setIsVisible(false); // Hide the XIcon
+    setIsVisible(false); // Hide the X icon when clicked
     setIsDropdownOpen(false); // Close the dropdown
   };
 
@@ -81,16 +81,18 @@ const LinksNavbar: React.FC = () => {
           className="fixed top-0 right-0 h-full w-2/3 bg-gray-800 rounded-l-md shadow-lg z-50 transform transition-transform duration-300 ease-in-out translate-x-0"
         >
           {isVisible && (
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                handleClose(); // Close the dropdown when XIcon is clicked
-              }}
-              className="block px-4 py-2 mt-5 text-white hover:bg-gray-700"
-            >
-              <XIcon className="h-10 w-10" />
-            </a>
+            <div className="flex justify-end px-4 py-2">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClose(); // Close the dropdown and hide the cross icon
+                }}
+                className="text-white hover:bg-gray-700"
+              >
+                <FaTimes size={24} className="h-7 w-7 " /> {/* Cross icon */}
+              </a>
+            </div>
           )}
           <a
             href="#top-rented"
@@ -131,19 +133,6 @@ const LinksNavbar: React.FC = () => {
             className="block w-full text-left px-4 py-2 bg-white text-gray-700 hover:bg-gray-100"
           >
             Login/Register
-            <svg
-              className="-mr-1 ml-2 h-5 w-5 inline-block"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 3a1 1 0 01.894.553l3 6a1 1 0 01-.01.914l-3 6A1 1 0 0110 17H5a1 1 0 01-.894-1.447l3-6a1 1 0 01.01-.914l-3-6A1 1 0 015 3h5z"
-                clipRule="evenodd"
-              />
-            </svg>
           </button>
         </div>
       )}
@@ -188,19 +177,6 @@ const LinksNavbar: React.FC = () => {
           className="inline-flex justify-center rounded-lg border border-gray-300 shadow-md px-4 py-2 bg-white text-sm font-medium text-gray-700 transition-all duration-150 ease-in-out hover:bg-gray-100 focus:outline-none"
         >
           Login/Register
-          <svg
-            className="-mr-1 ml-2 h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 3a1 1 0 01.894.553l3 6a1 1 0 01-.01.914l-3 6A1 1 0 0110 17H5a1 1 0 01-.894-1.447l3-6a1 1 0 01.01-.914l-3-6A1 1 0 015 3h5z"
-              clipRule="evenodd"
-            />
-          </svg>
         </button>
       </div>
     </div>

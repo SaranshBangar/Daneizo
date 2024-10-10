@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Learning Registration </title>
+    <style type="text/css">
+        body{
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="emai__wrapper">
+        <div class="email__header">
+            <h1> Welcome dear User! </h1>
+        </div>
+        <div class="email__body">
+            <p> Hello <%=user.name%>, </p>
+            <p> Thank you registering with our Smart-Leaning development process, to activate your account, please use the following activation code:  </p>
+            <h2>  <%=activationCode%></h2>
+            <p> Please enter code on the activation page within the next 5 minutes. </p>
+            <p> If you did not register for a E-Learning account, please ignore this email! </p>
+
+        </div>
+        <div class="email__footer">
+            <p> If you have any question, please don't hesitate to contact us at <a href="mailto:">  </a> </p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

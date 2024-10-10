@@ -1,76 +1,110 @@
 "use client";
 
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const HeroCarousel: React.FC = () => {
-    const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    const showSlide = (index: number) => {
-        itemsRef.current.forEach((item, i) => {
-            if (item) {
-                item.classList.toggle('hidden', i !== index);
-            }
-        });
-    };
-
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % itemsRef.current.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + itemsRef.current.length) % itemsRef.current.length);
-    };
+    const sliderRef = useRef<HTMLDivElement | null>(null); // Use ref for the slider
 
     useEffect(() => {
+        const items = sliderRef.current?.querySelectorAll('[data-carousel-item]');
+        const totalItems = items ? items.length : 0;
+
+        const showSlide = (index: number) => {
+            const slider = sliderRef.current;
+            if (slider) {
+                slider.style.transform = `translateX(-${index * 100}%)`;
+            }
+        };
+
+        const nextSlide = () => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
+        };
+
+        const prevSlide = () => {
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
+        };
+
+        // Show the current slide whenever currentIndex changes
         showSlide(currentIndex);
+
+        // Set interval for automatic slide transition
+        const interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+        return () => {
+            clearInterval(interval);
+        };
     }, [currentIndex]);
 
     return (
-        <div className="w-full md:w-[700px] h-[200px] md:h-[300px]">
-            <div id="default-carousel" className="relative w-full" data-carousel="slide">
-                <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-                    {["https://picsum.photos/600/300", "https://picsum.photos/600/299", "https://picsum.photos/599/300", "https://picsum.photos/599/299"].map((src, index) => (
-                        <div
-                        key={index}
-                        ref={(el) => { itemsRef.current[index] = el; }}
-                        className={`transition-all duration-700 ease-in-out ${index !== currentIndex ? 'hidden' : ''}`}
-                        data-carousel-item
-                    >
-                        <Image
-                            src={src}
-                            alt={`Carousel image ${index + 1}`}
-                            width={600}
-                            height={300}
-                            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
-                        />
+        <div className="relative overflow-hidden w-[700px] h-[400px]">
+            <div id="default-carousel" className="relative w-full h-full" data-carousel="slide">
+                <div className="relative h-full overflow-hidden rounded-xl bg-gray-200">
+                    <div className="flex transition-transform duration-700 ease-in-out" ref={sliderRef}>
+                        <div className="min-w-full h-full overflow-hidden transition-opacity duration-700 ease-in-out opacity-100" data-carousel-item>
+                            <Image
+                                src="/images/carousel/img1.jpg"
+                                alt="Slide 1"
+                                width={600}
+                                height={300}
+                                className="block w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div className="min-w-full h-full overflow-hidden transition-opacity duration-700 ease-in-out" data-carousel-item>
+                            <Image
+                                src="/images/carousel/img2.jpg"
+                                alt="Slide 2"
+                                width={600}
+                                height={300}
+                                className="block w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div className="min-w-full h-full overflow-hidden transition-opacity duration-700 ease-in-out" data-carousel-item>
+                            <Image
+                                src="/images/carousel/img3.jpg"
+                                alt="Slide 3"
+                                width={600}
+                                height={300}
+                                className="block w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
+                        <div className="min-w-full h-full overflow-hidden transition-opacity duration-700 ease-in-out" data-carousel-item>
+                            <Image
+                                src="/images/carousel/img6.jpg"
+                                alt="Slide 4"
+                                width={700}
+                                height={300}
+                                className="block w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
                     </div>
-                    ))}
                 </div>
+
+                {/* Previous Button */}
                 <button
                     type="button"
-                    className="absolute top-1/2 left-0 z-30 rounded-full flex items-center justify-center h-fit px-4 cursor-pointer group focus:outline-none"
-                    onClick={prevSlide}
-                    aria-label="Previous slide"
+                    className="absolute top-1/2 left-2 z-30 p-2 bg-transparent text-white rounded-full shadow-lg transition-all duration-150 ease-in-out hover:bg-gray-700"
+                    onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + sliderRef.current?.children.length!) % sliderRef.current?.children.length!)}
+                    data-carousel-prev
                 >
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 transition-all duration-150 ease-in-out group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-                        <svg className="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1L1 5l4 4" />
-                        </svg>
-                    </span>
+                    <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1L1 5l4 4" />
+                    </svg>
+                    <span className="sr-only">Previous</span>
                 </button>
+
+                {/* Next Button */}
                 <button
                     type="button"
-                    className="absolute top-1/2 right-0 z-30 rounded-full flex items-center justify-center h-fit px-4 cursor-pointer group focus:outline-none"
-                    onClick={nextSlide}
-                    aria-label="Next slide"
+                    className="absolute top-1/2 right-2 z-30 p-2 bg-transparent text-white rounded-full shadow-lg transition-all duration-150 ease-in-out hover:bg-gray-700"
+                    onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderRef.current?.children.length!)}
+                    data-carousel-next
                 >
-                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 transition-all duration-150 ease-in-out group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-                        <svg className="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 9l4-4-4-4" />
-                        </svg>
-                    </span>
+                    <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 9l4-4-4-4" />
+                    </svg>
+                    <span className="sr-only">Next</span>
                 </button>
             </div>
         </div>

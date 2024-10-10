@@ -139,7 +139,7 @@ const AllTopRentedItems = [
 
 const itemMappings = generateItemMappings(AllTopRentedItems);
 
-const Card: React.FC<TopRentedItemsCardsProps> = ({
+export const Card: React.FC<TopRentedItemsCardsProps> = ({
     image,
     itemName,
     lender,

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="bg-[#040312]">
-      <Navbar />
+      
       <div className="flex flex-col items-center justify-center">
         <div className="w-[75%]">
           <Hero />
@@ -38,7 +38,6 @@ export default function Home() {
           <UserTestimonials />
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

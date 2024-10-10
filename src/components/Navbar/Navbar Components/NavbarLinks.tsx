@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import nProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const showProgressbar = (): void => {
   nProgress.start();
@@ -63,9 +64,12 @@ const LinksNavbar: React.FC = () => {
 
       {isDropdownOpen && (
         <div 
-          ref={dropdownRef} 
-          className="fixed top-0 right-0 h-full w-2/3 bg-gray-800 rounded-l-md shadow-lg z-50 transform transition-transform duration-300 ease-in-out translate-x-0"
-        >
+        ref={dropdownRef} 
+        className="fixed top-0 right-0 h-full w-2/3 bg-gray-800 rounded-l-md shadow-lg z-50 transform transition-transform duration-300 ease-in-out translate-x-0"
+      >
+        <div className="flex justify-end p-4">
+          <AiOutlineClose size={24} color="white" onClick={toggleDropdown} />
+        </div>
           <a 
             href="#top-rented" 
             onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }} 

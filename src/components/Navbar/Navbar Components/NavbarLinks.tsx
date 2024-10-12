@@ -93,7 +93,7 @@ const LinksNavbar: React.FC = () => {
           </a>
           <button
             onClick={() => {
-              const targetPage = isLogin ? '/register' : '/login'; 
+              const targetPage = isLogin ? '/signup' : '/login'; 
               handleNavigation(targetPage); 
               toggleLoginRegister(); 
             }}
@@ -132,7 +132,7 @@ const LinksNavbar: React.FC = () => {
         </a>
         <button
           onClick={() => {
-            const targetPage = isLogin ? '/register' : '/login'; 
+            const targetPage = isLogin ? '/signup' : '/login'; 
             handleNavigation(targetPage); 
             toggleLoginRegister(); 
           }}

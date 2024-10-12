@@ -164,7 +164,7 @@ export const Card: React.FC<TopRentedItemsCardsProps> = ({
 
     return (
         <Link
-            href={`/items/${id}?${queryParams}`}
+            href={`#`}
             target="_blank"
             className="min-w-[285px] h-[360px] rounded-[20px] bg-[#8D8BD3]/20 flex flex-col gap-[7px] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500" // Hover zoom effect with transition and gradient
             style={{ cursor: "pointer" }}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex bg-[#040312] flex-col items-center justify-center">
       <div className="w-[75%] mb-20">
         <TopRentedItems />
         <div className="flex">

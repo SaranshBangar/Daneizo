@@ -1,6 +1,6 @@
 const FiltersColumn = () => {
     return (
-      <div className="w-1/4 p-4 mt-14 bg-gray-100 border border-gray-300 rounded-lg space-y-6 max-h-screen overflow-y-auto">
+      <div className="w-1/4 p-4 mt-14 bg-[#040312] border border-gray-300 rounded-lg space-y-6 max-h-screen overflow-y-auto">
         <h1 className="text-xl font-bold mb-4">Filters</h1>
   
         {/* Category Filter */}

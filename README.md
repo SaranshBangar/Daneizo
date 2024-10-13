@@ -146,7 +146,7 @@ For any inquiries or feedback, please contact. Happy Contributing 🫡
 
    ![Contributors](https://contrib.rocks/image?repo=SaranshBangar/Daneizo&v=1)
 </div>
-
----
-
 Contribute and make renting simpler for everyone! 🚀
+
+## ⭐️ Support the Project
+If you find this project helpful, please consider giving it a ⭐ on GitHub! Your support helps to grow the project and reach more contributors.

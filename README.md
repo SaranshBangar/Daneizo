@@ -127,10 +127,15 @@ This project is licensed under the MIT License.
 
 ---
 
-## Contact
+<!-- Added Team section -->
+## 👥 Team
 
-- **Maintainer:** Saransh Bangar
-- **Email:** saranshbangad@gmail.com
+| ![Saransh Bangar](https://avatars.githubusercontent.com/u/114401238?v=4&s=80) |
+|:--:|
+| **Saransh Bangar** <br> <sub>Project Admin</sub> | 
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/saransh-bangar/) [![Gmail](https://img.icons8.com/fluency/32/000000/gmail.png)](mailto:saranshbangad@gmail.com) |
+
+For any inquiries or feedback, please contact. Happy Contributing 🫡
 
 ---
 

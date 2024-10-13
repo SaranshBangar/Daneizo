@@ -94,6 +94,8 @@ We encourage all contributors to help improve the platform!
 
 Make sure to check out the [Issues](#issues) section for tasks that need attention.
 
+We welcome all contributions to improve **Daneizo**! If you would like to contribute, please follow the [Contributing.md](./Contributing.md) to get more details on how to get started.
+
 To maintain quality and consistency, please adhere to the following guidelines:
 1. Code Style: Follow the coding style used throughout the project. Clean, readable code with comments is always appreciated.
 2. Commits: Write meaningful commit messages.

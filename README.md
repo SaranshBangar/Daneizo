@@ -123,7 +123,7 @@ Check out the [issues tab](https://github.com/SaranshBangar/Daneizo/issues) to f
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT](./LICENSE) License.
 
 ---
 

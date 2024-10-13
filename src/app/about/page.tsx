@@ -1,19 +1,34 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';  // Importing Link for navigation
 import Navbar from '@/components/Navbar/Navbar';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: "About Us | Daneizo" 
 };
 
 const AboutUs: React.FC = () => {
   const pageTitle = metadata.title as string;
+
   return (
     <>
-    <Head>
+      <Head>
         <title>{pageTitle}</title>
       </Head>
       <Navbar />
+
+      {/* Back Button */}
+      <div className="fixed top-4 left-4">
+   <Link href="/">
+    <button className="text-white font-bold bg-transparent w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-500 hover:border-white transition-all">
+      ←
+    </button>
+  </Link>
+</div>
+
+
+
       <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-black py-16 px-6 sm:px-8 lg:px-16 flex flex-col justify-center items-center">
         <div className="max-w-4xl mx-auto bg-opacity-80 rounded-lg shadow-2xl p-6 md:p-8 transform transition-all duration-300 hover:scale-105">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

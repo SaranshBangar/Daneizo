@@ -6,7 +6,8 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 
 [Live Demo](https://daneizo.vercel.app/)
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 <!-- Added Hacktoberfest 2024 and GSSoc Extended 2024 acceptance banners -->
 ### This project is now OFFICIALLY accepted for
@@ -17,6 +18,9 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 </div>
 <br>
 
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
 ## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -26,7 +30,8 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 - [License](#license)
 - [Contact](#contact)
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Features
 
@@ -36,7 +41,8 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 - **Authentication:** User login and management.
 - **Admin Panel:** Manage rental listings and users.
   
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Tech Stack
 
@@ -45,7 +51,8 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 - **Database:** MongoDB (with Mongoose)
 - **Payments:** Razorpay Integration (Planned)
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Installation
 
@@ -78,7 +85,8 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
    npm run build
    ```
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Contribution Guide
 
@@ -113,19 +121,22 @@ To maintain quality and consistency, please adhere to the following guidelines:
 3. Pull Requests: Make sure PRs are focused, well-explained, and reference any issues they address.
 4. Testing: Ensure that your changes are well-tested locally and don’t break existing functionality.
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## Issues
 
 Check out the [issues tab](https://github.com/SaranshBangar/Daneizo/issues) to find bugs, feature requests, or tasks. Feel free to pick one and start contributing.
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## License
 
 This project is licensed under the [MIT](./LICENSE) License.
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 <!-- Added Team section -->
 ## 👥 Team
@@ -137,7 +148,8 @@ This project is licensed under the [MIT](./LICENSE) License.
 
 For any inquiries or feedback, please contact. Happy Contributing 🫡
 
----
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 <div>
   <h2 align = "center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35">Our Contributors</h2>
@@ -147,6 +159,9 @@ For any inquiries or feedback, please contact. Happy Contributing 🫡
    ![Contributors](https://contrib.rocks/image?repo=SaranshBangar/Daneizo&v=1)
 </div>
 Contribute and make renting simpler for everyone! 🚀
+
+<!--Line-->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 ## ⭐️ Support the Project
 If you find this project helpful, please consider giving it a ⭐ on GitHub! Your support helps to grow the project and reach more contributors.

@@ -54,8 +54,17 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 3. **Set up environment variables:**
    Create a `.env.local` file in the root directory and add the following:
    ```
-   MONGODB_URI=<your-mongodb-uri>
+   MONGODB_URI=mongodb+srv:
    NEXT_PUBLIC_RAZORPAY_KEY=<razorpay-key>
+
+   # Firebase Configuration
+   NEXT_PUBLIC_FIREBASE_API_KEY=" "
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="  "
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID="   "
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="  "
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="   "
+   NEXT_PUBLIC_FIREBASE_APP_ID=" "
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="  "
    ```
 
 4. **Run the development server:**

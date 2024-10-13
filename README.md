@@ -94,6 +94,12 @@ We encourage all contributors to help improve the platform!
 
 Make sure to check out the [Issues](#issues) section for tasks that need attention.
 
+To maintain quality and consistency, please adhere to the following guidelines:
+1. Code Style: Follow the coding style used throughout the project. Clean, readable code with comments is always appreciated.
+2. Commits: Write meaningful commit messages.
+3. Pull Requests: Make sure PRs are focused, well-explained, and reference any issues they address.
+4. Testing: Ensure that your changes are well-tested locally and don’t break existing functionality.
+
 ---
 
 ## Issues

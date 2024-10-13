@@ -175,7 +175,7 @@ const TopRentedGrid = () => {
     <div className="grid grid-cols-3 gap-5">
       {
       AllTopRentedItems.map((item) => (
-        <div className="p-10">
+        <div key={item.itemName} className="p-10">
           <Card
             image={item.image}
             itemName={item.itemName}

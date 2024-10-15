@@ -87,6 +87,14 @@ const Footer = () => {
                   Help Center
                 </a>
               </li>
+              <li>
+                <a
+                  href="/contributor"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  Our Contributors
+                </a>
+              </li>
             </ul>
           </div>
 

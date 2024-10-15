@@ -6,7 +6,7 @@ const TopRentedItems = () => {
     <section className="mt-[150px]">
         <div className="flex flex-col gap-[14px]">
             <TopRentedItemsTitle />
-            <TopRentedItemsCards />
+            <TopRentedItemsCards/>
         </div>
     </section>
   )

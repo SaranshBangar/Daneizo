@@ -9,7 +9,7 @@ interface FormData {
     message: string;
 }
 
-const page = () => {
+const ContactUs: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
         name: '',
         phone: '',
@@ -201,4 +201,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default ContactUs;

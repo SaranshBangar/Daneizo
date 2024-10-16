@@ -1,21 +1,21 @@
 const FiltersColumn = () => {
     return (
       <div className="w-1/4 p-4 mt-14 bg-[#040312] border border-gray-300 rounded-lg space-y-6 max-h-screen overflow-y-auto">
-        <h1 className="text-xl font-bold mb-4">Filters</h1>
+        <h1 className="text-xl font-bold mb-4 text-white">Filters</h1>
   
         {/* Category Filter */}
         <div>
-          <h2 className="font-semibold mb-2">Category</h2>
+          <h2 className="font-semibold mb-2 text-white">Category</h2>
           <div className="flex flex-col space-y-2">
-            <label className="inline-flex items-center">
+            <label className="inline-flex items-center text-white">
               <input type="checkbox" className="form-checkbox rounded text-purple-600 focus:ring focus:ring-purple-500" />
               <span className="ml-2">Electronics</span>
             </label>
-            <label className="inline-flex items-center">
+            <label className="inline-flex items-center text-white">
               <input type="checkbox" className="form-checkbox rounded text-purple-600 focus:ring focus:ring-purple-500" />
               <span className="ml-2">Furniture</span>
             </label>
-            <label className="inline-flex items-center">
+            <label className="inline-flex items-center text-white">
               <input type="checkbox" className="form-checkbox rounded text-purple-600 focus:ring focus:ring-purple-500" />
               <span className="ml-2">Appliances</span>
             </label>
@@ -24,8 +24,8 @@ const FiltersColumn = () => {
   
         {/* Price Filter */}
         <div>
-          <h2 className="font-semibold mb-2">Price Range</h2>
-          <div className="flex items-center space-x-2">
+          <h2 className="font-semibold mb-2 text-white">Price Range</h2>
+          <div className="flex items-center space-x-2 text-white">
             <span>$0</span>
             <input
               type="range"
@@ -39,7 +39,7 @@ const FiltersColumn = () => {
   
         {/* Sort Filter */}
         <div>
-          <h2 className="font-semibold mb-2">Sort By</h2>
+          <h2 className="font-semibold mb-2 text-white">Sort By</h2>
           <select className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-purple-500">
             <option value="popularity">Popularity</option>
             <option value="price-low-high">Price: Low to High</option>

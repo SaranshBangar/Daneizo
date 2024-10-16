@@ -43,7 +43,7 @@ const LinksNavbar: React.FC = () => {
   const handleNavigation = (href: string) => {
     showProgressbar();
     setTimeout(() => {
-      window.location.href = href; 
+      window.location.href = href;
       nProgress.done();
     }, 300);
   };
@@ -55,7 +55,7 @@ const LinksNavbar: React.FC = () => {
   return (
     <div className="relative flex items-center">
       <button onClick={toggleDropdown} className="text-white hover:text-gray-300 relative flex items-center md:hidden">
-        <FaBars size={24} /> 
+        <FaBars size={24} />
       </button>
 
       {isDropdownOpen && (
@@ -63,43 +63,50 @@ const LinksNavbar: React.FC = () => {
       )}
 
       {isDropdownOpen && (
-        <div 
-        ref={dropdownRef} 
-        className="fixed top-0 right-0 h-full w-2/3 bg-gray-800 rounded-l-md shadow-lg z-50 transform transition-transform duration-300 ease-in-out translate-x-0"
-      >
-        <div className="flex justify-end p-4">
-          <AiOutlineClose size={24} color="white" onClick={toggleDropdown} />
-        </div>
-          <a 
-            href="#top-rented" 
-            onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }} 
+        <div
+          ref={dropdownRef}
+          className="fixed top-0 right-0 h-full w-2/3 bg-gray-800 rounded-l-md shadow-lg z-50 transform transition-transform duration-300 ease-in-out translate-x-0"
+        >
+          <div className="flex justify-end p-4">
+            <AiOutlineClose size={24} color="white" onClick={toggleDropdown} />
+          </div>
+          <a
+            href="#top-rented"
+            onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }}
             className="block px-4 py-2 mt-5 text-white hover:bg-gray-700"
           >
             Top Rented Items
           </a>
-          <a 
-            href="#featured" 
-            onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }} 
+          <a
+            href="#featured"
+            onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }}
             className="block px-4 py-2 text-white hover:bg-gray-700"
           >
             Featured Items
           </a>
-          <a 
-            href="#about" 
-            onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} 
+          <a
+            href="#about"
+            onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }}
             className="block px-4 py-2 text-white hover:bg-gray-700"
           >
             About Us
           </a>
+          <a
+            href="#contact"
+            onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }}
+            className="block px-4 py-2 text-white hover:bg-gray-700"
+          >
+            Contact Us
+          </a>
           <button
             onClick={() => {
-              const targetPage = isLogin ? '/signup' : '/login'; 
-              handleNavigation(targetPage); 
-              toggleLoginRegister(); 
+              const targetPage = isLogin ? '/signup' : '/login';
+              handleNavigation(targetPage);
+              toggleLoginRegister();
             }}
             className="block w-full text-left px-4 py-2 bg-white text-gray-700 hover:bg-gray-100"
           >
-            Login/Register 
+            Login/Register
             <svg className="-mr-1 ml-2 h-5 w-5 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fillRule="evenodd" d="M10 3a1 1 0 01.894.553l3 6a1 1 0 01-.01.914l-3 6A1 1 0 0110 17H5a1 1 0 01-.894-1.447l3-6a1 1 0 01.01-.914l-3-6A1 1 0 015 3h5z" clipRule="evenodd" />
             </svg>
@@ -107,38 +114,45 @@ const LinksNavbar: React.FC = () => {
         </div>
       )}
 
-      
+
       <div className="hidden md:flex items-center space-x-6 ml-4">
-        <a 
-          href="#top-rented" 
-          onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }} 
+        <a
+          href="#top-rented"
+          onClick={(e) => { e.preventDefault(); handleNavigation('/top-rented'); }}
           className="text-white cursor-pointer hover:text-gray-300"
         >
           Top Rented Items
         </a>
-        <a 
-          href="#featured" 
-          onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }} 
+        <a
+          href="#featured"
+          onClick={(e) => { e.preventDefault(); handleNavigation('/featured'); }}
           className="text-white cursor-pointer hover:text-gray-300"
         >
           Featured Items
         </a>
-        <a 
-          href="#about" 
-          onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }} 
+        <a
+          href="#about"
+          onClick={(e) => { e.preventDefault(); handleNavigation('/about'); }}
           className="text-white cursor-pointer hover:text-gray-300"
         >
           About Us
         </a>
+        <a
+          href="#contact"
+          onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }}
+          className="text-white cursor-pointer hover:text-gray-300"
+        >
+          Contact Us
+        </a>
         <button
           onClick={() => {
-            const targetPage = isLogin ? '/signup' : '/login'; 
-            handleNavigation(targetPage); 
-            toggleLoginRegister(); 
+            const targetPage = isLogin ? '/signup' : '/login';
+            handleNavigation(targetPage);
+            toggleLoginRegister();
           }}
           className="inline-flex justify-center rounded-lg border border-gray-300 shadow-md px-4 py-2 bg-white text-sm font-medium text-gray-700 transition-all duration-150 ease-in-out hover:bg-gray-100 focus:outline-none"
         >
-          Login/Register 
+          Login/Register
           <svg className="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fillRule="evenodd" d="M10 3a1 1 0 01.894.553l3 6a1 1 0 01-.01.914l-3 6A1 1 0 0110 17H5a1 1 0 01-.894-1.447l3-6a1 1 0 01.01-.914l-3-6A1 1 0 015 3h5z" clipRule="evenodd" />
           </svg>

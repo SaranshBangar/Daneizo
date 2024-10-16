@@ -2,11 +2,12 @@ import React from "react";
 import {
   Facebook,
   Instagram,
-  Twitter,
+  X,
   Mail,
   Phone,
   MapPin,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 
 const Footer = () => {
@@ -39,7 +40,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter className="w-6 h-6 text-white hover:text-[#1DA1F2] transition-colors duration-300" />
+                <FaXTwitter className="w-6 h-6 text-white font:bolder hover:text-[#000000] transition-colors duration-300" />
               </a>
               <a
                 href="https://www.facebook.com"
@@ -84,6 +85,14 @@ const Footer = () => {
                   className="text-white/70 hover:text-white transition-colors duration-300"
                 >
                   Help Center
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contributor"
+                  className="text-white/70 hover:text-white transition-colors duration-300"
+                >
+                  Our Contributors
                 </a>
               </li>
             </ul>

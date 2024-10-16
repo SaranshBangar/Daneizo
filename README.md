@@ -70,7 +70,7 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 3. **Set up environment variables:**
    Create a `.env.local` file in the root directory and add the following:
    ```
-   MONGODB_URI=mongodb+srv:
+   MONGODB_URI=<your-mongodb-uri>
    NEXT_PUBLIC_RAZORPAY_KEY=<razorpay-key>
 
    # Firebase Configuration

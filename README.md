@@ -74,13 +74,13 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
    NEXT_PUBLIC_RAZORPAY_KEY=<razorpay-key>
 
    # Firebase Configuration
-   NEXT_PUBLIC_FIREBASE_API_KEY=" "
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="  "
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID="   "
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="  "
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="   "
-   NEXT_PUBLIC_FIREBASE_APP_ID=" "
-   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="  "
+   NEXT_PUBLIC_FIREBASE_API_KEY=<your-firebase-api-key>
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=<your-firebase-auth-domain>
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=<your-firebase-project-id>
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=<your-firebase-storage-key>
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<your-firebase-messaging-sender-id>
+   NEXT_PUBLIC_FIREBASE_APP_ID=<your-firebase-app-id>
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=<your-firebase-measurement-id>>
    ```
 
 4. **Run the development server:**

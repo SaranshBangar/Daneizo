@@ -12,9 +12,9 @@ import { LuUser2,LuMail,LuLock } from "react-icons/lu";
         <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-black py-16 px-6 sm:px-8 lg:px-16 flex  justify-center items-center flex-row-reverse">
            
 
-        <form className='text-white flex flex-col border-2 px-10 py-10  gap-6 rounded-2xl text-center md:w-4/12 sm:w-1/2 font-outfit shadow-md shadow-blue-300 backdrop-blur-md backdrop-brightness-150'>
-            <h1 className='text-4xl font-semibold'>Sign Up</h1>
-            <p className='text-sm'>Register Yourself!</p>
+        <form className='text-gray-800 flex flex-col border-2 px-10 py-10  gap-6 rounded-2xl text-center md:w-4/12 sm:w-1/2 font-outfit shadow-md shadow-blue-300 backdrop-blur-md backdrop-brightness-150'>
+            <h1 className='text-white text-4xl font-semibold'>Sign Up</h1>
+            <p className='text-white text-sm'>Register Yourself!</p>
             <div className="flex items-center border border-gray-300 rounded-xl px-3 py-2 bg-white">
   <LuUser2 className="text-gray-400 mr-2" />
   <input
@@ -74,7 +74,7 @@ import { LuUser2,LuMail,LuLock } from "react-icons/lu";
                 Sign Up
             </button>
            </div>
-                <h1 className='text-sm'>Already have an account?<span className='hover:text-[#B7E0FF] font-semibold hover:cursor-pointer' > Login</span></h1>
+                <h1 className='text-white text-sm'>Already have an account?<span className='hover:text-[#B7E0FF] font-semibold hover:cursor-pointer' > Login</span></h1>
             
            
         </form>

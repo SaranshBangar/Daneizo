@@ -80,7 +80,7 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=<your-firebase-storage-key>
    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<your-firebase-messaging-sender-id>
    NEXT_PUBLIC_FIREBASE_APP_ID=<your-firebase-app-id>
-   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=<your-firebase-measurement-id>>
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=<your-firebase-measurement-id>
    ```
 
 4. **Run the development server:**

@@ -38,7 +38,7 @@ const HeroCarousel: React.FC = () => {
     }, [currentIndex]);
 
     return (
-        <div className="relative overflow-hidden w-[700px] h-[400px]">
+        <div className="relative overflow-hidden w-[700px] h-[400px] max-sm:h-[285px] max-sm:w-[95%]">
             <div id="default-carousel" className="relative w-full h-full" data-carousel="slide">
                 <div className="relative h-full overflow-hidden rounded-xl bg-gray-200">
                     <div className="flex transition-transform duration-700 ease-in-out" ref={sliderRef}>

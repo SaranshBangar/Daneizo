@@ -3,11 +3,11 @@ import TopRentedItemsTitle from "./Top Rented Items Components/TopRentedItemsTit
 
 const TopRentedItems = () => {
   return (
-    <section className="mt-[150px]">
-        <div className="flex flex-col gap-[14px]">
-            <TopRentedItemsTitle />
-            <TopRentedItemsCards/>
-        </div>
+    <section className="mt-[150px] max-sm:mt-0">
+      <div className="flex flex-col gap-[14px]">
+        <TopRentedItemsTitle />
+        <TopRentedItemsCards />
+      </div>
     </section>
   )
 }

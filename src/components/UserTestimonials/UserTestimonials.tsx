@@ -4,7 +4,7 @@ import UserTestimonialsTitle from "./User Testimonials Components/UserTestimonia
 const UserTestimonials = () => {
   return (
 
-    <section className="mt-[120px] mb-[56px] px-4">
+    <section className="mt-[120px] mb-[56px] px-4 max-sm:mb-4">
       <div className="flex flex-col gap-[14px]">
         <UserTestimonialsTitle />
         <UserTestimonialsCards />

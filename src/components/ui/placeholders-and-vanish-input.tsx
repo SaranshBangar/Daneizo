@@ -6,10 +6,12 @@ import { cn } from "@/utils/cn";
 
 export function PlaceholdersAndVanishInput({
   placeholders,
+  valuesearch,
   onChange,
   onSubmit,
 }: {
   placeholders: string[];
+  valuesearch:string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) {
@@ -178,6 +180,8 @@ export function PlaceholdersAndVanishInput({
   };
 
   return (
+    <>
+   
     <form
       className={cn(
         "w-full relative max-w-xl mx-auto bg-white dark:bg-transparent border-b-[0.5px] border-white h-12 overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
@@ -271,5 +275,6 @@ export function PlaceholdersAndVanishInput({
         </AnimatePresence>
       </div>
     </form>
+    </>
   );
 }

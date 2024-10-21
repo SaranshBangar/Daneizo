@@ -16,7 +16,7 @@ const AboutUs: React.FC = () => {
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <Navbar />
+      
 
       {/* Back Button */}
       <div className="fixed top-4 left-4">

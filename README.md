@@ -1,4 +1,4 @@
-# Daneizo
+# ✨Daneizo✨
 
 ## Why Buy When You Can Rent It! 🎉
 
@@ -8,6 +8,29 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+            <td><b>🌐 Contributors</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/SaranshBangar/Daneizo?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/SaranshBangar/Daneizo?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/SaranshBangar/Daneizo?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/SaranshBangar/Daneizo?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/SaranshBangar/Daneizo?style=flat&color=green&logo=github"/></td>
+           <td><img alt="Contributors" src="https://img.shields.io/github/contributors/SaranshBangar/Daneizo?style=flat&color=green&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
 
 <!-- Added Hacktoberfest 2024 and GSSoc Extended 2024 acceptance banners -->
 ### This project is now OFFICIALLY accepted for
@@ -21,19 +44,19 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Table of Contents
+## 🧾Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Contribution Guide](#contribution-guide)
 - [Issues](#issues)
 - [License](#license)
-- [Contact](#contact)
+- [Contact](#team)
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Features
+## ⭐Features
 
 - **Item Rental:** Browse, rent, and manage rental items.
 - **Search Functionality:** Quickly find items available for rent.
@@ -44,17 +67,29 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Tech Stack
+## 🛠Tech Stack
+<div align="center">
 
-- **Frontend:** Next.js, TypeScript, Tailwind CSS
-- **Backend:** Node.js (with Express)
-- **Database:** MongoDB (with Mongoose)
-- **Payments:** Razorpay Integration (Planned)
+### Frontend
+<img src="https://skillicons.dev/icons?i=html,css,javascript,typescript,nextjs,tailwindcss&theme=dark" />
+
+### Backend
+<img src="https://skillicons.dev/icons?i=nodejs,express&theme=dark" />
+
+### Databases
+<img src="https://skillicons.dev/icons?i=mongodb&theme=dark" />
+
+### Payments
+![image](https://github.com/user-attachments/assets/3d08c89e-aa45-4a21-9616-a578d15cddac)
+
+### Services
+<img src="https://skillicons.dev/icons?i=npm,vercel&theme=dark" />
+</div>
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Installation
+## 📥Installation
 
 1. **Clone the repository:**
    ```bash
@@ -88,7 +123,7 @@ Daneizo is a platform that allows users to rent a variety of items instead of pu
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Contribution Guide
+## 📙Contribution Guide
 
 We encourage all contributors to help improve the platform!
 
@@ -124,14 +159,14 @@ To maintain quality and consistency, please adhere to the following guidelines:
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## Issues
+## 🐛Issues
 
 Check out the [issues tab](https://github.com/SaranshBangar/Daneizo/issues) to find bugs, feature requests, or tasks. Feel free to pick one and start contributing.
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
-## License
+## 🆔License
 
 This project is licensed under the [MIT](./LICENSE) License.
 
@@ -146,7 +181,7 @@ This project is licensed under the [MIT](./LICENSE) License.
 | **Saransh Bangar** <br> <sub>Project Admin</sub> | 
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/saransh-bangar/) [![Gmail](https://img.icons8.com/fluency/32/000000/gmail.png)](mailto:saranshbangad@gmail.com) |
 
-For any inquiries or feedback, please contact. Happy Contributing 🫡
+For any inquiries or feedback, please contact. Happy Contributing❤
 
 <!--Line-->
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">

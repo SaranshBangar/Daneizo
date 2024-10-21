@@ -9,7 +9,7 @@ const HowItWorksSlides = () => {
       title: "Register",
       value: "register",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
+        <div  className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-[#0F2654] to-[#3A284F]">
           <p>Register with us!</p>
           <Slide />
         </div>

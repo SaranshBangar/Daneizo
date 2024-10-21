@@ -9,13 +9,14 @@ import {
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
+import GoogleTranslator from '@/components/GoogleTranslator/GoogleTranslator'
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-white py-12 max-sm:pt-0">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-8">
-          <div> 
+          <div>
             <div className="flex gap-2 items-center">
               <a href="/" className="cursor-default">
                 <Image src="/Logo.svg" alt="Logo" width={35} height={35} />
@@ -73,6 +74,13 @@ const Footer = () => {
                 >
                   Our Contributors
                 </a>
+              </li>
+              <li>
+                <div>
+
+                  <GoogleTranslator />
+                </div>
+
               </li>
             </ul>
           </div>

@@ -12,44 +12,23 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-white py-12">
+    <footer className="bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-white py-12 max-sm:pt-0">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-8">
+          <div> 
             <div className="flex gap-2 items-center">
               <a href="/" className="cursor-default">
                 <Image src="/Logo.svg" alt="Logo" width={35} height={35} />
               </a>
               <a href="/" className="cursor-default">
-                <h2 className="font-praise text-white text-[30px]">Daneízo</h2>
+                <h2 className="font-praise text-white text-[30px]">
+                  Daneízo
+                </h2>
               </a>
             </div>
             <p className="text-white/70 mb-4">
-              Empowering your digital journey with innovative solutions.
+              Empowering your digital journey <br /> with innovative solutions.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram className="w-6 h-6 text-white hover:text-[#C13584] transition-colors duration-300" />
-              </a>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaXTwitter className="w-6 h-6 text-white font:bolder hover:text-[#000000] transition-colors duration-300" />
-              </a>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="w-6 h-6 text-white hover:text-[#2D68C4] transition-colors duration-300" />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -147,6 +126,30 @@ const Footer = () => {
               </button>
             </form>
           </div>
+        </div>
+
+        <div className="flex justify-center gap-4 mt-8">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram className="w-6 h-6 text-white hover:text-[#C13584] transition-colors duration-300" />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter className="w-6 h-6 text-white font:bolder hover:text-[#000000] transition-colors duration-300" />
+          </a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Facebook className="w-6 h-6 text-white hover:text-[#2D68C4] transition-colors duration-300" />
+          </a>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/20 text-center">

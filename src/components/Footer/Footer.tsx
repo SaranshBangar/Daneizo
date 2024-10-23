@@ -8,14 +8,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState<string>("");
 
-    const validateEmail = (email) => {
+    const validateEmail = (email: string): boolean => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
 
-    const handleSubscribe = (e) => {
+    const handleSubscribe = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
         if (!email) {
             toast.error("Please enter an email address!");

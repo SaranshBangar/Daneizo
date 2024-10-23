@@ -25,6 +25,7 @@ const Register: React.FC = () => {
                 <h1 className='text-4xl font-semibold'>Sign Up</h1>
                 <p className='text-sm'>Register Yourself!</p>
 
+
                 <div className="flex items-center border border-gray-300 rounded-xl px-3 py-2 bg-white">
                     <LuUser2 className="text-gray-400 mr-2" />
                     <input
@@ -94,6 +95,7 @@ const Register: React.FC = () => {
                 </h1>
                 <GoogleButton /> {/* Include GoogleButton component */}
             </form>
+
         </div>
     );
 };

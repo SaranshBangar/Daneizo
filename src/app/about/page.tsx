@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';  // Importing Link for navigation
 import Navbar from '@/components/Navbar/Navbar';
 import { Metadata } from 'next';
+import Head from 'next/head';
+import Link from 'next/link'; // Importing Link for navigation
+import React from 'react';
 
 export const metadata: Metadata = {
   title: "About Us | Daneizo" 
@@ -20,7 +20,7 @@ const AboutUs: React.FC = () => {
 
       {/* Back Button */}
       <div className="fixed top-4 left-4">
-   <Link href="/">
+  <Link href="/">
     <button className="text-white font-bold bg-transparent w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-500 hover:border-white transition-all">
       ←
     </button>

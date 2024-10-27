@@ -1,86 +1,120 @@
-// components/Form.js
 "use client";
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-import { LuUser2,LuMail,LuLock } from "react-icons/lu";
-  const Register: React.FC = () => {
-   
+const SignupPageStep1: React.FC = () => {
+  const [name, setName] = useState<string>('');
+  const [phoneNumber, setPhoneNumber] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+  const router = useRouter();
 
-    
-    
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push('/confirm'); 
+  };
 
-    return (
-        <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-black py-16 px-6 sm:px-8 lg:px-16 flex  justify-center items-center flex-row-reverse">
-           
+  return (
+    <div className="relative min-h-screen flex items-center justify-between bg-cover bg-center" style={{ backgroundImage: 'url(/night.jpg)' }}>
+      <div className="absolute inset-0 bg-black opacity-30"></div>
 
-        <form className='text-gray-800 flex flex-col border-2 px-10 py-10  gap-6 rounded-2xl text-center md:w-4/12 sm:w-1/2 font-outfit shadow-md shadow-blue-300 backdrop-blur-md backdrop-brightness-150'>
-            <h1 className='text-white text-4xl font-semibold'>Sign Up</h1>
-            <p className='text-white text-sm'>Register Yourself!</p>
-            <div className="flex items-center border border-gray-300 rounded-xl px-3 py-2 bg-white">
-  <LuUser2 className="text-gray-400 mr-2" />
-  <input
-    type="text"
-    id="Username"
-    name="Username"
-    placeholder="Username"
-    className="outline-none w-full"
-  />
-</div>
-           
-
-           
-<div className="flex flex-col gap-4">
- 
-  <div className="relative w-full">
-    <LuMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Email"
-      className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
-    />
-  </div>
-
-  
-  <div className="relative w-full">
-    <LuLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-    <input
-      type="password"
-      id="password"
-      name="password"
-      placeholder="Password"
-      className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
-    />
-  </div>
-
-  
-  <div className="relative w-full">
-    <LuLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-    <input
-      type="password"
-      id="confirm-password"
-      name="confirm-password"
-      placeholder="Confirm Password"
-      className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
-    />
-  </div>
-</div>
-
-
-           
-           
-           <div className='mt-4'>
-           <button type="submit" className='py-2 w-full rounded-2xl text-md bg-[#FEFFA7] border-2 border-[#FEFFA7] text-slate-700 font-semibold hover:text-[#FEFFA7] hover:bg-slate-700  transition-all duration-200 ' >
-                Sign Up
-            </button>
-           </div>
-                <h1 className='text-white text-sm'>Already have an account?<span className='hover:text-[#B7E0FF] font-semibold hover:cursor-pointer' > Login</span></h1>
-            
-           
-        </form>
+      <div className="relative z-10 flex flex-col justify-center items-start p-8 text-white w-1/2">
+        <div className="flex gap-4 items-center ml-64 mb-20">
+          <a href="/" className="cursor-default">
+            <Image
+              src="/Logo.svg"
+              alt="Logo"
+              width={30}
+              height={30}
+              className="w-[3vw] h-auto mb-3 -mr-2"
+            />
+          </a>
+          <a href="/" className="cursor-default">
+            <h2 className="font-bold text-white text-[1rem] md:text-[1.5rem]">Daneízo</h2>
+          </a>
         </div>
-    );
+      </div>
 
+      <div className="relative z-10 w-full max-w-lg bg-white rounded-lg shadow-lg p-8 mr-64 mb-20">
+        <h2 className="text-center text-2xl font-bold mt-4">Create an account</h2>
+        <p className="text-center text-gray-500 mt-1">Step 1 of 3</p>
+
+        <div className="flex justify-center space-x-4 mt-6">
+          <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+            <img src="/google.png" alt="Google" className="w-6 h-6" />
+          </button>
+          <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+            <img src="/facebook.png" alt="Facebook" className="w-6 h-6" />
+          </button>
+          <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+            <img src="/github.png" alt="GitHub" className="w-6 h-6" />
+          </button>
+          <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+            <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6" />
+          </button>
+          <button className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+            <img src="/twitter.png" alt="X" className="w-6 h-6" />
+          </button>
+        </div>
+
+        <div className="mt-6">
+          <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label className="block text-gray-700">Full Name</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700">Phone Number</label>
+              <input
+                type="tel"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700">Email Address</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            {errorMessage && (
+              <div className="text-red-500 text-sm mb-4">
+                {errorMessage}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
+            >
+              Continue to Step 2
+            </button>
+          </form>
+        </div>
+
+        <div className="text-center mt-6">
+          <p>Already have an account? <a href="/login" className="text-blue-600">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Register;
+export default SignupPageStep1;

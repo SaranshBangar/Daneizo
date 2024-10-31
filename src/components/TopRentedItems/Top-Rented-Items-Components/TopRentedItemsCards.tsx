@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, Star } from "lucide-react";
 import Image from "next/image";
+import { AllTopRentedItems } from "@/app/product";
 
 type TopRentedItemsCardsProps = {
     image: string;
@@ -16,6 +17,7 @@ type TopRentedItemsCardsProps = {
     rating: number;
     slug: string;
     id: number;
+    productId: number;
 };
 
 const generateRandomId = () => {
@@ -35,107 +37,6 @@ const generateItemMappings = (items: Omit<TopRentedItemsCardsProps, 'id'>[]) => 
 };
 
 
-const AllTopRentedItems = [
-    {
-        image: "https://picsum.photos/243/237",
-        itemName: "Toyota Car",
-        lender: "Saransh",
-        place: "Gurgaon",
-        oldPrice: 5000,
-        currentPrice: 3500,
-        duration: "week",
-        rating: 4.8,
-        slug: "toyota-car",
-    },
-    {
-        image: "https://picsum.photos/242/237",
-        itemName: "Hairdryer",
-        lender: "Rakiul",
-        place: "Malda",
-        oldPrice: 1000,
-        currentPrice: 800,
-        duration: "week",
-        rating: 4.9,
-        slug: "hairdryer",
-    },
-    {
-        image: "https://picsum.photos/243/236",
-        itemName: "Laptop",
-        lender: "Dev",
-        place: "Canada",
-        oldPrice: 10000,
-        currentPrice: 9500,
-        duration: "day",
-        rating: 4.7,
-        slug: "laptop",
-    },
-    {
-        image: "https://picsum.photos/243/237",
-        itemName: "Toyota Car",
-        lender: "Saransh",
-        place: "Gurgaon",
-        oldPrice: 5000,
-        currentPrice: 3500,
-        duration: "week",
-        rating: 4.8,
-        slug: "toyota-car",
-    },
-    {
-        image: "https://picsum.photos/242/237",
-        itemName: "Hairdryer",
-        lender: "Rakiul",
-        place: "Malda",
-        oldPrice: 1000,
-        currentPrice: 800,
-        duration: "week",
-        rating: 4.9,
-        slug: "hairdryer",
-    },
-    {
-        image: "https://picsum.photos/243/236",
-        itemName: "Laptop",
-        lender: "Dev",
-        place: "Canada",
-        oldPrice: 10000,
-        currentPrice: 9500,
-        duration: "day",
-        rating: 4.7,
-        slug: "laptop",
-    },
-    {
-        image: "https://picsum.photos/243/237",
-        itemName: "Toyota Car",
-        lender: "Saransh",
-        place: "Gurgaon",
-        oldPrice: 5000,
-        currentPrice: 3500,
-        duration: "week",
-        rating: 4.8,
-        slug: "toyota-car",
-    },
-    {
-        image: "https://picsum.photos/242/237",
-        itemName: "Hairdryer",
-        lender: "Rakiul",
-        place: "Malda",
-        oldPrice: 1000,
-        currentPrice: 800,
-        duration: "week",
-        rating: 4.9,
-        slug: "hairdryer",
-    },
-    {
-        image: "https://picsum.photos/243/236",
-        itemName: "Laptop",
-        lender: "Dev",
-        place: "Canada",
-        oldPrice: 10000,
-        currentPrice: 9500,
-        duration: "day",
-        rating: 4.7,
-        slug: "laptop",
-    },
-];
 
 const itemMappings = generateItemMappings(AllTopRentedItems);
 
@@ -148,6 +49,7 @@ export const Card: React.FC<TopRentedItemsCardsProps> = ({
     currentPrice,
     duration,
     rating,
+    productId,
     slug,
     id
 }) => {
@@ -160,13 +62,14 @@ export const Card: React.FC<TopRentedItemsCardsProps> = ({
         currentPrice: currentPrice.toString(),
         duration,
         rating: rating.toString(),
+        productId: productId.toString(),
     }).toString();
 
     return (
         <Link
-            href={`#`}
-            target="_blank"
-            className="min-w-[285px] h-[360px] rounded-[20px] bg-[#8D8BD3]/20 flex flex-col gap-[7px] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500" // Hover zoom effect with transition and gradient
+            href={`/top-rented/${productId}`}
+         
+            className="min-w-[285px] h-[360px] rounded bg-[#8D8BD3]/20 flex flex-col gap-[7px] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500" // Hover zoom effect with transition and gradient
             style={{ cursor: "pointer" }}
         >
             <div className="mt-[20px] mx-[20px]">
@@ -175,7 +78,7 @@ export const Card: React.FC<TopRentedItemsCardsProps> = ({
                     alt={itemName}
                     width={285}
                     height={200}
-                    className="rounded-[15px]"
+                    className="rounded"
                 />
             </div>
             <div className="text-white mx-[20px]">
@@ -225,7 +128,7 @@ const TopRentedItemsCards = () => {
         return () => clearInterval(intervalId);
     }, [hoveredIndex]);
 
-    const allItemsList = [...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems]; 
+    const allItemsList = [...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems, ...AllTopRentedItems];
 
     return (
         <div className="relative">
@@ -257,6 +160,7 @@ const TopRentedItemsCards = () => {
                                 duration={item.duration}
                                 rating={item.rating}
                                 slug={item.slug}
+                                productId={item.productId}
                                 id={id}
                             />
                         </div>

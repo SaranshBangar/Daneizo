@@ -24,7 +24,6 @@ const registerSchema = z
 
 const Register: React.FC = () => {
   const router = useRouter();
-
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +38,6 @@ const Register: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setErrors({ username: "", email: "", password: "", confirmPassword: "" });
 
     const formData = { username, email, password, confirmPassword };
@@ -59,9 +57,7 @@ const Register: React.FC = () => {
     try {
       const response = await fetch("/api/register", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -82,7 +78,7 @@ const Register: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-black py-16 px-6 sm:px-8 lg:px-16 flex justify-center items-center flex-row-reverse">
       <form
-      noValidate
+        noValidate
         onSubmit={handleSubmit}
         className="text-gray-800 flex flex-col border-2 px-10 py-10 gap-6 rounded-2xl text-center md:w-4/12 sm:w-1/2 font-outfit shadow-md shadow-blue-300 backdrop-blur-md backdrop-brightness-150"
       >
@@ -101,59 +97,51 @@ const Register: React.FC = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        {errors.username && (
-          <p className="text-red-500 text-sm">{errors.username}</p>
-        )}
+        {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
 
-        <div className="flex flex-col gap-4">
-          <div className="relative w-full">
-            <LuMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email}</p>
-          )}
-
-          <div className="relative w-full">
-            <LuLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-              className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          {errors.password && (
-            <p className="text-red-500 text-sm">{errors.password}</p>
-          )}
-
-          <div className="relative w-full">
-            <LuLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-              placeholder="Confirm Password"
-              className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-          </div>
-          {errors.confirmPassword && (
-            <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
-          )}
+        <div className="relative w-full">
+          <LuMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
+        {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+
+        <div className="relative w-full">
+          <LuLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+
+        <div className="relative w-full">
+          <LuLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirm Password"
+            className="pl-10 py-2 border border-gray-300 rounded-xl outline-none w-full"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </div>
+        {errors.confirmPassword && (
+          <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
+        )}
 
         <div className="mt-4">
           <button

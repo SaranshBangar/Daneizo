@@ -1,0 +1,33 @@
+/* In your global CSS file */
+.goog-te-combo {
+    background-color: #272d39 !important;
+    border-radius: 0.4rem !important;
+    padding: 0.5rem 0.3rem !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: #fff !important;
+    text-align: center !important;
+}
+
+.goog-te-combo:hover {
+    background-color: #272d31 !important;
+    color: silver !important;
+    transform: scale(1.02) !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.skiptranslate iframe {
+    display: none !important;
+}
+
+/* Additional custom styling overrides */
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    color: #fff !important;
+}

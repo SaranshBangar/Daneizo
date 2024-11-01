@@ -4,6 +4,7 @@ import { z } from "zod";
 import { LuMail, LuLock } from "react-icons/lu";
 import { useRouter } from "next/navigation";
 
+// Schema for form validation using Zod
 const loginSchema = z.object({
   email: z.string().email("Invalid email address."),
   password: z.string().min(1, "Invalid password"),
@@ -11,18 +12,13 @@ const loginSchema = z.object({
 
 const Register: React.FC = () => {
   const router = useRouter();
-
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const [errors, setErrors] = useState({
-    email: "",
-    password: "",
-  });
+  const [errors, setErrors] = useState({ email: "", password: "" });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setErrors({ email: "", password: "" });
 
     const formData = { email, password };
@@ -63,7 +59,7 @@ const Register: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-black py-16 px-6 sm:px-8 lg:px-16 flex justify-center items-center flex-row-reverse">
       <form
-      noValidate
+        noValidate
         onSubmit={handleSubmit}
         className="text-white flex flex-col border-2 px-10 py-10 gap-6 rounded-2xl text-center md:w-4/12 sm:w-1/2 font-outfit shadow-md shadow-blue-300 backdrop-blur-md backdrop-brightness-150"
       >
@@ -108,8 +104,9 @@ const Register: React.FC = () => {
         </div>
         <h1 className="text-sm">
           Don't have an account?
-          <span className="hover:text-[#B7E0FF] font-semibold hover:cursor-pointer"
-          onClick={handleRedirect}
+          <span
+            className="hover:text-[#B7E0FF] font-semibold hover:cursor-pointer"
+            onClick={handleRedirect}
           >
             {" "}
             Sign up

@@ -10,20 +10,25 @@ const HeroText: React.FC = () => {
         Rent, Use, Return - It's That Simple!
       </h3>
       <div className="flex gap-[27px] items-center mt-[20px]">
+
         <a href="/login">
+
         <HeroButton
           text="Go Rent"
           textColour="#040312"
           backgroundColour="#FFFFFF"
           borderColour="#FFFFFF"
+
         />
         </a>
         {/* <HeroButton
+
           text="Log in"
           textColour="#FFFFFF"
           backgroundColour="#040312"
           borderColour="#FFFFFF"
         /> */}
+
       </div>
       <div className="mt-[48px]">
         <Image

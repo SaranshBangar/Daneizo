@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { Facebook, Instagram, X, Mail, Phone, MapPin } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
+ import GoogleTranslator from '@/components/GoogleTranslator/GoogleTranslator'
+
+ 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -26,7 +29,7 @@ const Footer = () => {
             setEmail(""); // Clear the input after successful subscription
         }
     };
-
+ 
     return (
         <footer className="bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-white py-12">
             <div className="container mx-auto px-4">
@@ -121,6 +124,9 @@ const Footer = () => {
                                     Our Contributors
                                 </a>
                             </li>
+                          <li>
+                             <GoogleTranslator />
+                          </li>
                         </ul>
                     </div>
 

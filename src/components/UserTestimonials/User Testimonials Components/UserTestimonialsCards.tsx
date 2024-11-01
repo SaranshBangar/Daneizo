@@ -2,7 +2,15 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+ 
 type AllUserTestimonialsProps = {
   image: string;
   userName: string;
@@ -84,34 +92,47 @@ const UserTestimonialsCards = () => {
   const totalTestimonials = AllUserTestimonials.length;
 
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => prevIndex + 1);
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  useEffect(() => {
-    if (carouselRef.current) {
-      const testimonialWidth = 365 + 14; // Card width + gap
-      carouselRef.current.style.transition = "transform 0.5s ease-in-out";
-      carouselRef.current.style.transform = `translateX(-${(currentIndex % totalTestimonials) * testimonialWidth
-        }px)`;
+  // useEffect(() => {
+  //   if (carouselRef.current) {
+  //     const testimonialWidth = 365 + 14; // Card width + gap
+  //     carouselRef.current.style.transition = "transform 0.5s ease-in-out";
+  //     carouselRef.current.style.transform = `translateX(-${(currentIndex % totalTestimonials) * testimonialWidth
+  //       }px)`;
 
-      if (currentIndex >= totalTestimonials) {
-        setTimeout(() => {
-          carouselRef.current!.style.transition = "none";
-          setCurrentIndex(0);
-        }, 500);
-      }
-    }
-  }, [currentIndex, totalTestimonials]);
+  //     if (currentIndex >= totalTestimonials) {
+  //       setTimeout(() => {
+  //         carouselRef.current!.style.transition = "none";
+  //         setCurrentIndex(0);
+  //       }, 500);
+  //     }
+  //   }
+  // }, [currentIndex, totalTestimonials]);
 
   return (
-    <div className="marquee-content gap-3 flex justify-center animate-marquee" >
-      {AllUserTestimonials.map((item, index) => (
-        <div key={index} className="flex-shrink-0 w-full md:w-[300px] lg:w-[350px]">
+
+    <Carousel
+      opts={{
+        align: "start",
+        loop: true
+      }}
+      className="w-full"
+
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+    >
+      <CarouselContent>{AllUserTestimonials.map((item, index) => (
+        <div key={index} className="flex-shrink-0 basis-1/3 w-full md:w-[300px] lg:w-[350px]">
           <Card
             image={item.image}
             userName={item.userName}
@@ -119,7 +140,22 @@ const UserTestimonialsCards = () => {
           />
         </div>
       ))}
-    </div>
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+
+    // <div className="marquee-content gap-3 flex justify-center animate-marquee" >
+    //   {AllUserTestimonials.map((item, index) => (
+    //     <div key={index} className="flex-shrink-0 w-full md:w-[300px] lg:w-[350px]">
+    //       <Card
+    //         image={item.image}
+    //         userName={item.userName}
+    //         testimonial={item.testimonial}
+    //       />
+    //     </div>
+    //   ))}
+    // </div>
   );
 };
 

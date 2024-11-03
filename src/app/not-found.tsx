@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Custom404: React.FC = () => {
   return (
     <>
-      <Navbar />
+      
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-t from-[#28354F] to-[#040312] font-outfit text-[16px] pb-2">
         <div className="text-center text-white">
           <h1 className="text-6xl font-bold">404</h1>

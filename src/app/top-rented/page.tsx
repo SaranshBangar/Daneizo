@@ -1,4 +1,4 @@
-import { Card } from "@/components/TopRentedItems/Top Rented Items Components/TopRentedItemsCards";
+import { Card } from "@/components/TopRentedItems/Top-Rented-Items-Components/TopRentedItemsCards";
 import TopRentedItems from "@/components/TopRentedItems/TopRentedItems";
 import TopRentedGrid from "@/components/TopRentedItems/ToprentedPageGrid";
 import FiltersColumn from "@/components/ui/filters";

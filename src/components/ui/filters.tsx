@@ -1,6 +1,6 @@
 const FiltersColumn = () => {
     return (
-      <div className="w-1/4 p-4 mt-14 bg-[#040312] border border-gray-300 rounded-lg space-y-6 max-h-screen overflow-y-auto">
+      <div className="  sticky top-2 w-1/4 p-4 mt-5 bg-[#040312] border rounded space-y-6 max-h-screen overflow-y-auto">
         <h1 className="text-xl font-bold mb-4 text-white">Filters</h1>
   
         {/* Category Filter */}
@@ -40,7 +40,7 @@ const FiltersColumn = () => {
         {/* Sort Filter */}
         <div>
           <h2 className="font-semibold mb-2 text-white">Sort By</h2>
-          <select className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-purple-500">
+          <select className="w-full p-2 border-0  rounded focus:outline-none focus:ring focus:ring-purple-500">
             <option value="popularity">Popularity</option>
             <option value="price-low-high">Price: Low to High</option>
             <option value="price-high-low">Price: High to Low</option>

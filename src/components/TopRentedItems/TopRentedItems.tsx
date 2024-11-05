@@ -1,12 +1,12 @@
-import TopRentedItemsCards from "./Top Rented Items Components/TopRentedItemsCards"
-import TopRentedItemsTitle from "./Top Rented Items Components/TopRentedItemsTitle"
+import TopRentedItemsCards from "./Top-Rented-Items-Components/TopRentedItemsCards"
+import TopRentedItemsTitle from "./Top-Rented-Items-Components/TopRentedItemsTitle"
 
 const TopRentedItems = () => {
   return (
-    <section className="mt-[150px] max-sm:mt-0">
-      <div className="flex flex-col gap-[14px]">
+    <section className=" max-sm:mt-0">
+      <div className="flex flex-col">
         <TopRentedItemsTitle />
-        <TopRentedItemsCards />
+        {/* <TopRentedItemsCards /> */}
       </div>
     </section>
   )

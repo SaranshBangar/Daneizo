@@ -73,25 +73,49 @@ const Card: React.FC<AllUserTestimonialsProps> = ({
           {userName}
         </p>
       </div>
-      {/* Back Face will go here */}
+      {/* Back Face */}
       <div className="absolute inset-0 h-full w-full rounded-xl bg-gradient-to-br from-[#433FD7]/20 to-[#8D8BD3]/20 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
         <div className="mt-[20px] h-full flex flex-col justify-evenly items-center">
           <p className="font-tillana">{testimonial}</p>
         </div>
       </div>
-
-
     </div>
   </div>
 );
 
 const UserTestimonialsCards = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef<HTMLDivElement>(null);
-
-  const totalTestimonials = AllUserTestimonials.length;
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [hovered, setHovered] = useState(false);
 
 
+  useEffect(() => {
+    const autoScroll = () => {
+      if (scrollRef.current && !hovered) {
+        const { scrollWidth, clientWidth, scrollLeft } = scrollRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth) {
+          scrollRef.current.scrollLeft = 0;  // Reset scroll position to create infinite loop
+        } else {
+          scrollRef.current.scrollLeft += 1;  // Slow scroll speed
+        }
+      }
+    };
+
+    const intervalId = setInterval(autoScroll, 20);  // Adjust speed as needed
+    return () => clearInterval(intervalId);
+  }, [hovered]);
+
+  return (
+    <div
+      className="flex overflow-x-scroll no-scrollbar gap-5"
+      ref={scrollRef}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {/* Duplicate testimonials to create the infinite scroll illusion */}
+      {AllUserTestimonials.concat(AllUserTestimonials).map((item, index) => (
+        <div key={index} className="flex-shrink-0 w-full md:w-[300px] lg:w-[350px]">
+          <Card image={item.image} userName={item.userName} testimonial={item.testimonial} />
+=======
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -138,6 +162,7 @@ const UserTestimonialsCards = () => {
             userName={item.userName}
             testimonial={item.testimonial}
           />
+
         </div>
       ))}
       </CarouselContent>
